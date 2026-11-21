@@ -112,6 +112,55 @@
     "text": "Documentos\n\nInforme completo en PDF\nPlan de preanálisis, versión 2.2\n\nEl análisis está escrito en Python (notebook de marimo) y es reproducible de principio a fin a partir de los datos públicos de INEGI y del padrón. El código está en un repositorio privado."
   },
   {
+    "objectID": "perfiles.html",
+    "href": "perfiles.html",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "",
+    "text": "La ENIGH 2024 permite ver algo que el padrón no trae: cómo viven las y los jóvenes que reciben la beca y en qué se parecen, o no, a quienes la necesitan y no la tienen. Aquí se comparan tres grupos de 18 a 29 años: becarios de JCF (310 en la muestra), NEET sin JCF, es decir, quienes no estudian ni trabajan y no reciben la beca (11,928), y el resto de los jóvenes (43,314). Los dos primeros forman la necesidad del programa, así que su contraste muestra a quién deja fuera."
+  },
+  {
+    "objectID": "perfiles.html#ingreso-parecido-cargas-de-cuidado-muy-distintas",
+    "href": "perfiles.html#ingreso-parecido-cargas-de-cuidado-muy-distintas",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "1. Ingreso parecido, cargas de cuidado muy distintas",
+    "text": "1. Ingreso parecido, cargas de cuidado muy distintas\nBecarios y NEET sin JCF viven en hogares de ingreso parecido: cerca de ocho de cada diez están en los deciles I a VI (79 % y 77 %). Lo que los separa es el cuidado. Entre las mujeres NEET sin JCF, 63 % tiene hijos, contra 37 % de las becarias, y 48 % de los NEET sin JCF vive con un niño de 0 a 5 años.\n\nLas razones que dan para no trabajar apuntan en la misma dirección: el 83 % de las mujeres NEET sin JCF se dedica a los quehaceres del hogar, mientras que el 54 % de los hombres NEET sin JCF buscó trabajo."
+  },
+  {
+    "objectID": "perfiles.html#más-escolaridad-entre-quienes-reciben-la-beca",
+    "href": "perfiles.html#más-escolaridad-entre-quienes-reciben-la-beca",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "2. Más escolaridad entre quienes reciben la beca",
+    "text": "2. Más escolaridad entre quienes reciben la beca\nCasi la mitad de los becarios terminó la media superior. Entre los NEET sin beca, 45 % tiene secundaria o menos."
+  },
+  {
+    "objectID": "perfiles.html#muy-concentrados-en-los-hogares-de-menor-ingreso",
+    "href": "perfiles.html#muy-concentrados-en-los-hogares-de-menor-ingreso",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "3. Muy concentrados en los hogares de menor ingreso",
+    "text": "3. Muy concentrados en los hogares de menor ingreso\nDos de cada cinco becarios viven en hogares de los deciles I y II, medidos con el ingreso del hogar sin la beca."
+  },
+  {
+    "objectID": "perfiles.html#sur-y-rural-frente-a-una-necesidad-que-está-en-las-ciudades",
+    "href": "perfiles.html#sur-y-rural-frente-a-una-necesidad-que-está-en-las-ciudades",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "4. Sur y rural, frente a una necesidad que está en las ciudades",
+    "text": "4. Sur y rural, frente a una necesidad que está en las ciudades\nLa mitad de los becarios vive en el Sur y 42 % en localidades rurales, coherente con la prioridad que las reglas de operación dan a municipios de alto rezago y a población indígena (30 % de los becarios se considera indígena, contra 25 % de los NEET sin beca). Los NEET sin beca, en cambio, se concentran en el Centro y en ciudades de 100 mil habitantes o más."
+  },
+  {
+    "objectID": "perfiles.html#un-problema-de-medición",
+    "href": "perfiles.html#un-problema-de-medición",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "5. Un problema de medición",
+    "text": "5. Un problema de medición\nSolo 21 % de los becarios se declara NEET en la encuesta: la mayoría cuenta el aprendizaje como trabajo. Por eso el informe define la necesidad como NEET o becario. Si solo se contara a quienes se declaran NEET, quedarían fuera cuatro de cada cinco becarios."
+  },
+  {
+    "objectID": "perfiles.html#tabla-completa",
+    "href": "perfiles.html#tabla-completa",
+    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "section": "Tabla completa",
+    "text": "Tabla completa\nPorcentajes ponderados con el factor de expansión; entre corchetes, IC95% con errores agrupados por UPM.\n\n\n\n\n\n\n\n\n\nCaracterística (%)\nBecarios JCF (n = 310)\nNEET sin JCF (n = 11,928)\nResto (n = 43,314)\n\n\n\n\nMujer\n62.1 [54.9, 69.2]\n77.9 [76.6, 79.1]\n44.8 [44.1, 45.5]\n\n\n18 a 24 años\n66.2 [59.5, 72.9]\n58.5 [57.0, 59.9]\n62.3 [61.5, 63.0]\n\n\nJefe(a) o cónyuge\n25.2 [19.0, 31.4]\n30.0 [28.6, 31.3]\n21.2 [20.5, 21.9]\n\n\nVive con pareja\n33.6 [26.5, 40.7]\n44.2 [42.7, 45.6]\n25.5 [24.7, 26.3]\n\n\nCon hijos (solo mujeres)\n37.2 [29.0, 45.3]\n62.5 [60.9, 64.1]\n28.6 [27.6, 29.6]\n\n\nNiño 0-5 en el hogar\n31.4 [24.8, 38.0]\n47.9 [46.3, 49.4]\n26.8 [26.0, 27.7]\n\n\nSecundaria o menos\n30.2 [23.0, 37.4]\n45.3 [43.7, 46.8]\n25.1 [24.3, 26.0]\n\n\nMedia superior/técnica\n47.0 [39.3, 54.8]\n37.8 [36.4, 39.3]\n38.5 [37.8, 39.3]\n\n\nSuperior\n22.8 [16.6, 29.0]\n16.9 [15.8, 18.1]\n36.4 [35.5, 37.2]\n\n\nHabla lengua indígena\n5.7 [2.4, 8.9]\n7.0 [5.9, 8.2]\n4.9 [4.2, 5.5]\n\n\nSe considera indígena\n30.4 [23.7, 37.2]\n24.6 [22.9, 26.3]\n21.6 [20.5, 22.7]\n\n\nAfromexicano(a)\n1.6 [0.0, 3.4]\n2.7 [2.2, 3.2]\n3.0 [2.7, 3.4]\n\n\nDiscapacidad\n2.6 [0.0, 5.9]\n6.3 [5.7, 7.0]\n2.2 [1.9, 2.4]\n\n\nDeciles I-II (sin beca)\n39.4 [31.5, 47.3]\n30.5 [28.8, 32.2]\n13.8 [13.0, 14.6]\n\n\nDeciles I-IV\n61.6 [53.7, 69.5]\n56.3 [54.6, 58.1]\n32.0 [30.9, 33.1]\n\n\nDeciles I-VI\n79.3 [72.9, 85.7]\n76.6 [75.2, 78.1]\n52.5 [51.4, 53.6]\n\n\nNorte\n6.7 [3.3, 10.2]\n19.2 [17.9, 20.5]\n19.4 [18.4, 20.4]\n\n\nCentro Norte\n22.9 [15.7, 30.2]\n20.2 [18.7, 21.7]\n21.7 [20.4, 22.9]\n\n\nCentro\n21.2 [13.8, 28.5]\n36.9 [34.6, 39.2]\n38.4 [36.7, 40.1]\n\n\nSur\n49.2 [40.2, 58.2]\n23.7 [21.9, 25.6]\n20.5 [19.3, 21.8]\n\n\nCiudad 100 mil+\n18.5 [12.1, 24.9]\n42.4 [40.3, 44.5]\n51.6 [50.0, 53.2]\n\n\nUrbana 15-99 mil\n20.6 [13.0, 28.3]\n14.1 [12.5, 15.6]\n15.4 [14.1, 16.7]\n\n\nSemiurbana 2.5-15 mil\n18.8 [11.0, 26.6]\n17.0 [14.9, 19.2]\n14.8 [13.3, 16.3]\n\n\nRural &lt;2,500\n42.1 [33.4, 50.8]\n26.5 [24.6, 28.4]\n18.2 [17.0, 19.4]\n\n\nDice que trabajó el mes pasado\n74.6 [67.6, 81.6]\n0.0 [0.0, 0.0]\n79.7 [79.0, 80.4]\n\n\nAsiste a la escuela\n14.4 [8.9, 19.9]\n0.0 [0.0, 0.0]\n31.2 [30.4, 32.0]\n\n\n\nFuente: elaboración propia con la ENIGH 2024 (INEGI), clave de ingreso P108. Jóvenes de 18 a 29 años. Deciles de todas las personas del país, con el ingreso corriente del hogar por persona sin el ingreso de JCF."
+  },
+  {
     "objectID": "informe.html",
     "href": "informe.html",
     "title": "¿A quién llega Jóvenes Construyendo el Futuro?",
@@ -168,53 +217,60 @@
     "text": "Notas\n\n\nNEET es una categoría estadística, no un juicio sobre la voluntad de las personas.↩︎\nPanel persona-mes construido a partir de los archivos mensuales del padrón (febrero de 2024 a enero de 2025).↩︎\nPanel persona-mes construido a partir de los archivos mensuales del padrón (febrero de 2024 a enero de 2025).↩︎\nLa subcaptura también podría mover el denominador \\(E\\): un receptor no captado que se declara NEET queda en \\(E\\) con \\(D = 0\\), y uno que se declara ocupado sale de \\(E\\). El efecto es pequeño porque los receptores son 2 a 3% de \\(E\\) (Tabla C2).↩︎"
   },
   {
-    "objectID": "perfiles.html",
-    "href": "perfiles.html",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
+    "objectID": "tablero.html",
+    "href": "tablero.html",
+    "title": "Contexto 3 · Tablero del padrón",
     "section": "",
-    "text": "La ENIGH 2024 permite ver algo que el padrón no trae: cómo viven las y los jóvenes que reciben la beca y en qué se parecen, o no, a quienes la necesitan y no la tienen. Aquí se comparan tres grupos de 18 a 29 años: becarios de JCF (310 en la muestra), NEET sin JCF, es decir, quienes no estudian ni trabajan y no reciben la beca (11,928), y el resto de los jóvenes (43,314). Los dos primeros forman la necesidad del programa, así que su contraste muestra a quién deja fuera."
+    "text": "1,897,092\njóvenes distintos, ene 2022 – jul 2026\n\n\n59.4 %\nmujeres\n\n\n47.1 %\nsale antes del fin de su ciclo\n\n\n191,824\nsiguen activas en julio de 2026"
   },
   {
-    "objectID": "perfiles.html#ingreso-parecido-cargas-de-cuidado-muy-distintas",
-    "href": "perfiles.html#ingreso-parecido-cargas-de-cuidado-muy-distintas",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "1. Ingreso parecido, cargas de cuidado muy distintas",
-    "text": "1. Ingreso parecido, cargas de cuidado muy distintas\nBecarios y NEET sin JCF viven en hogares de ingreso parecido: cerca de ocho de cada diez están en los deciles I a VI (79 % y 77 %). Lo que los separa es el cuidado. Entre las mujeres NEET sin JCF, 63 % tiene hijos, contra 37 % de las becarias, y 48 % de los NEET sin JCF vive con un niño de 0 a 5 años.\n\nLas razones que dan para no trabajar apuntan en la misma dirección: el 83 % de las mujeres NEET sin JCF se dedica a los quehaceres del hogar, mientras que el 54 % de los hombres NEET sin JCF buscó trabajo."
+    "objectID": "tablero.html#el-padrón-mes-a-mes",
+    "href": "tablero.html#el-padrón-mes-a-mes",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "1. El padrón mes a mes",
+    "text": "1. El padrón mes a mes\n\n\n\n\n                            \n                                            \n\n\nFigura 1: Aprendices pagados y altas del mes. Julio de 2023 no existe en la fuente.\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 2: Beca mediana pagada por mes (pesos corrientes)."
   },
   {
-    "objectID": "perfiles.html#más-escolaridad-entre-quienes-reciben-la-beca",
-    "href": "perfiles.html#más-escolaridad-entre-quienes-reciben-la-beca",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "2. Más escolaridad entre quienes reciben la beca",
-    "text": "2. Más escolaridad entre quienes reciben la beca\nCasi la mitad de los becarios terminó la media superior. Entre los NEET sin beca, 45 % tiene secundaria o menos."
+    "objectID": "tablero.html#quiénes-entran-edad-y-sexo",
+    "href": "tablero.html#quiénes-entran-edad-y-sexo",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "2. Quiénes entran: edad y sexo",
+    "text": "2. Quiénes entran: edad y sexo\n\n\n\n\n                            \n                                            \n\n\nFigura 3: Personas distintas por edad en su primera aparición y sexo, 2022–2026."
   },
   {
-    "objectID": "perfiles.html#muy-concentrados-en-los-hogares-de-menor-ingreso",
-    "href": "perfiles.html#muy-concentrados-en-los-hogares-de-menor-ingreso",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "3. Muy concentrados en los hogares de menor ingreso",
-    "text": "3. Muy concentrados en los hogares de menor ingreso\nDos de cada cinco becarios viven en hogares de los deciles I y II, medidos con el ingreso del hogar sin la beca."
+    "objectID": "tablero.html#permanencia-por-cohorte-de-ingreso",
+    "href": "tablero.html#permanencia-por-cohorte-de-ingreso",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "3. Permanencia por cohorte de ingreso",
+    "text": "3. Permanencia por cohorte de ingreso\nCada línea es una cohorte (mes de alta) con al menos 10 mil personas. Haz clic en la leyenda para ocultar o mostrar cohortes; doble clic aísla una.\n\n\n\n\n                            \n                                            \n\n\nFigura 4: % que sigue recibiendo la beca k meses después del alta (Kaplan-Meier), por cohorte mensual.\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 5: La misma curva agrupada por año de alta. 2021 tiene entrada tardía: la base empieza en enero de 2022."
   },
   {
-    "objectID": "perfiles.html#sur-y-rural-frente-a-una-necesidad-que-está-en-las-ciudades",
-    "href": "perfiles.html#sur-y-rural-frente-a-una-necesidad-que-está-en-las-ciudades",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "4. Sur y rural, frente a una necesidad que está en las ciudades",
-    "text": "4. Sur y rural, frente a una necesidad que está en las ciudades\nLa mitad de los becarios vive en el Sur y 42 % en localidades rurales, coherente con la prioridad que las reglas de operación dan a municipios de alto rezago y a población indígena (30 % de los becarios se considera indígena, contra 25 % de los NEET sin beca). Los NEET sin beca, en cambio, se concentran en el Centro y en ciudades de 100 mil habitantes o más."
+    "objectID": "tablero.html#salida-antes-de-terminar-el-ciclo-según-la-definición",
+    "href": "tablero.html#salida-antes-de-terminar-el-ciclo-según-la-definición",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "4. Salida antes de terminar el ciclo, según la definición",
+    "text": "4. Salida antes de terminar el ciclo, según la definición\nEl fin de ciclo cambia entre cohortes: las convocatorias grandes reciben 12 pagos y las altas de reemplazo, 11. Usa el selector para ver cómo cambia la comparación con un corte fijo de 10 u 11 meses.\n\n\n\n\n                            \n                                            \n\n\nFigura 6: % que sale antes de terminar su ciclo, por cohorte mensual (cohortes con al menos 500 personas).\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 7: Retención condicional: de quienes seguían al mes 6, % que sigue al mes 9. Es la comparación más justa entre cohortes de distinto tamaño y calendario."
   },
   {
-    "objectID": "perfiles.html#un-problema-de-medición",
-    "href": "perfiles.html#un-problema-de-medición",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "5. Un problema de medición",
-    "text": "5. Un problema de medición\nSolo 21 % de los becarios se declara NEET en la encuesta: la mayoría cuenta el aprendizaje como trabajo. Por eso el informe define la necesidad como NEET o becario. Si solo se contara a quienes se declaran NEET, quedarían fuera cuatro de cada cinco becarios."
+    "objectID": "tablero.html#por-estado-cobertura-y-salida",
+    "href": "tablero.html#por-estado-cobertura-y-salida",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "5. Por estado: cobertura y salida",
+    "text": "5. Por estado: cobertura y salida\n\n\n\n\n                            \n                                            \n\n\nFigura 8: Becarios de 18 a 29 años por cada 100 jóvenes en el problema (becarios + NEET sin beca), por periodo del padrón. Barras de error: IC95% del denominador (ENIGH, bootstrap Rao-Wu).\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 9: % que sale antes de terminar su ciclo, por estado (2022–2026). Usa el selector para cambiar la definición.\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 10: Beca de 2024 (7,572 pesos) como % del ingreso laboral mediano de los jóvenes ocupados de 18 a 29 años en cada estado (ENOE, 1T2024). A la derecha de la línea, la beca iguala o supera ese ingreso."
   },
   {
-    "objectID": "perfiles.html#tabla-completa",
-    "href": "perfiles.html#tabla-completa",
-    "title": "Contexto 2 · Quiénes son: perfiles con la ENIGH 2024",
-    "section": "Tabla completa",
-    "text": "Tabla completa\nPorcentajes ponderados con el factor de expansión; entre corchetes, IC95% con errores agrupados por UPM.\n\n\n\n\n\n\n\n\n\nCaracterística (%)\nBecarios JCF (n = 310)\nNEET sin JCF (n = 11,928)\nResto (n = 43,314)\n\n\n\n\nMujer\n62.1 [54.9, 69.2]\n77.9 [76.6, 79.1]\n44.8 [44.1, 45.5]\n\n\n18 a 24 años\n66.2 [59.5, 72.9]\n58.5 [57.0, 59.9]\n62.3 [61.5, 63.0]\n\n\nJefe(a) o cónyuge\n25.2 [19.0, 31.4]\n30.0 [28.6, 31.3]\n21.2 [20.5, 21.9]\n\n\nVive con pareja\n33.6 [26.5, 40.7]\n44.2 [42.7, 45.6]\n25.5 [24.7, 26.3]\n\n\nCon hijos (solo mujeres)\n37.2 [29.0, 45.3]\n62.5 [60.9, 64.1]\n28.6 [27.6, 29.6]\n\n\nNiño 0-5 en el hogar\n31.4 [24.8, 38.0]\n47.9 [46.3, 49.4]\n26.8 [26.0, 27.7]\n\n\nSecundaria o menos\n30.2 [23.0, 37.4]\n45.3 [43.7, 46.8]\n25.1 [24.3, 26.0]\n\n\nMedia superior/técnica\n47.0 [39.3, 54.8]\n37.8 [36.4, 39.3]\n38.5 [37.8, 39.3]\n\n\nSuperior\n22.8 [16.6, 29.0]\n16.9 [15.8, 18.1]\n36.4 [35.5, 37.2]\n\n\nHabla lengua indígena\n5.7 [2.4, 8.9]\n7.0 [5.9, 8.2]\n4.9 [4.2, 5.5]\n\n\nSe considera indígena\n30.4 [23.7, 37.2]\n24.6 [22.9, 26.3]\n21.6 [20.5, 22.7]\n\n\nAfromexicano(a)\n1.6 [0.0, 3.4]\n2.7 [2.2, 3.2]\n3.0 [2.7, 3.4]\n\n\nDiscapacidad\n2.6 [0.0, 5.9]\n6.3 [5.7, 7.0]\n2.2 [1.9, 2.4]\n\n\nDeciles I-II (sin beca)\n39.4 [31.5, 47.3]\n30.5 [28.8, 32.2]\n13.8 [13.0, 14.6]\n\n\nDeciles I-IV\n61.6 [53.7, 69.5]\n56.3 [54.6, 58.1]\n32.0 [30.9, 33.1]\n\n\nDeciles I-VI\n79.3 [72.9, 85.7]\n76.6 [75.2, 78.1]\n52.5 [51.4, 53.6]\n\n\nNorte\n6.7 [3.3, 10.2]\n19.2 [17.9, 20.5]\n19.4 [18.4, 20.4]\n\n\nCentro Norte\n22.9 [15.7, 30.2]\n20.2 [18.7, 21.7]\n21.7 [20.4, 22.9]\n\n\nCentro\n21.2 [13.8, 28.5]\n36.9 [34.6, 39.2]\n38.4 [36.7, 40.1]\n\n\nSur\n49.2 [40.2, 58.2]\n23.7 [21.9, 25.6]\n20.5 [19.3, 21.8]\n\n\nCiudad 100 mil+\n18.5 [12.1, 24.9]\n42.4 [40.3, 44.5]\n51.6 [50.0, 53.2]\n\n\nUrbana 15-99 mil\n20.6 [13.0, 28.3]\n14.1 [12.5, 15.6]\n15.4 [14.1, 16.7]\n\n\nSemiurbana 2.5-15 mil\n18.8 [11.0, 26.6]\n17.0 [14.9, 19.2]\n14.8 [13.3, 16.3]\n\n\nRural &lt;2,500\n42.1 [33.4, 50.8]\n26.5 [24.6, 28.4]\n18.2 [17.0, 19.4]\n\n\nDice que trabajó el mes pasado\n74.6 [67.6, 81.6]\n0.0 [0.0, 0.0]\n79.7 [79.0, 80.4]\n\n\nAsiste a la escuela\n14.4 [8.9, 19.9]\n0.0 [0.0, 0.0]\n31.2 [30.4, 32.0]\n\n\n\nFuente: elaboración propia con la ENIGH 2024 (INEGI), clave de ingreso P108. Jóvenes de 18 a 29 años. Deciles de todas las personas del país, con el ingreso corriente del hogar por persona sin el ingreso de JCF."
+    "objectID": "tablero.html#edad-y-sexo",
+    "href": "tablero.html#edad-y-sexo",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "6. Edad y sexo",
+    "text": "6. Edad y sexo\n\n\n\n\n                            \n                                            \n\n\nFigura 11: % que sale antes de terminar su ciclo, por edad al ingresar y sexo."
+  },
+  {
+    "objectID": "tablero.html#por-qué-comparar-cohortes-el-padrón-de-2024",
+    "href": "tablero.html#por-qué-comparar-cohortes-el-padrón-de-2024",
+    "title": "Contexto 3 · Tablero del padrón",
+    "section": "7. Por qué comparar cohortes: el padrón de 2024",
+    "text": "7. Por qué comparar cohortes: el padrón de 2024\nEl primer tablero solo veía febrero de 2024 a enero de 2025 (522,791 personas). Ahí el conteo simple daba 28.9 % de salidas anticipadas, porque quien ya había salido antes de febrero no aparece y quien sí aparece ya “sobrevivió” varios meses. Mezclar cohortes con riesgos distintos en una sola curva da una curva que no describe a ninguna; por eso el tablero histórico compara cohortes de ingreso.\n\n\n\n\n                            \n                                            \n\n\nFigura 12: Padrón feb 2024 – ene 2025: meses desde el alta al salir. En coral, salidas antes de 10 meses; en azul marino, salidas con 10 meses o más (18 = 18 o más).\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigura 13: Curva agrupada del padrón 2024 (Kaplan-Meier con entrada tardía), total y por sexo.\n\n\n\n\nFuentes: Padrón Único de Beneficiarios, programa S280 (Secretaría de Bienestar), enero 2022–julio 2026; INEGI, ENIGH 2024 y ENOE 1T2024. Tablas agregadas, sin nombres ni identificadores."
   },
   {
     "objectID": "index.html",

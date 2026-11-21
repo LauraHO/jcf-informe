@@ -17,3 +17,4 @@ section#referencias p { padding-left: 1.5em; text-indent: -1.5em; }
 .botones { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 2rem; }
 .botones a { background: var(--navy); color: #fff; padding: .55rem 1rem; border-radius: 6px; text-decoration: none; }
 .botones a.sec { background: #fff; color: var(--navy); border: 1px solid var(--navy); }
+.cifras .cifra .num { white-space: nowrap; }

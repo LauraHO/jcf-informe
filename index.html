@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -74,6 +74,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script>
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+</script>
+<script type="module">import "https://cdn.plot.ly/plotly-4.1.1.min"</script>
+
 
 
 <link rel="stylesheet" href="estilo.css">
@@ -115,10 +124,6 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./perfiles.html">
  <span class="dropdown-text">2 · Quiénes son (ENIGH 2024)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./tablero.html">
- <span class="dropdown-text">3 · Tablero del padrón (interactivo)</span></a>
   </li>  
     </ul>
   </li>
@@ -177,50 +182,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Jóvenes Construyendo el Futuro (JCF) ofrece una beca mensual y capacitación en un centro de trabajo a jóvenes de 18 a 29 años que no estudian ni trabajan. Este proyecto usa la ENIGH 2024 para preguntar a quién llega el programa, y separa dos cosas que suelen confundirse: <strong>quién necesita</strong> el programa y <strong>a quién le llega entre quienes lo necesitan</strong>.</p>
+<!--
+CÓMO EDITAR ESTA PÁGINA
+- Los textos son los párrafos normales: se cambian como en cualquier documento.
+- Las cifras salen solas de ../output/ (resultados_rho_bootstrap.csv y arbitro_robustez.csv).
+- Después de editar: en la carpeta sitio/ corre `quarto render` y copia sitio/_site/ al repositorio jcf-informe.
+-->
+<p>Jóvenes Construyendo el Futuro (JCF) ofrece una beca mensual y capacitación en un centro de trabajo a jóvenes de 18 a 29 años que no estudian ni trabajan. Con la ENIGH 2024, este proyecto separa dos cosas que suelen confundirse: <strong>cuántos jóvenes elegibles hay</strong> en cada grupo y <strong>cuánto les llega el programa a esos elegibles</strong>. Elegible es quien no estudia ni tiene un trabajo remunerado, o ya recibe la beca.</p>
 <div class="botones">
 <p><a href="./informe.html">Leer el informe</a> <a href="archivos/informe-jcf-enigh2024.pdf" class="sec">Descargar el PDF</a> <a href="./datos.html" class="sec">Datos y método</a></p>
 </div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Para ponerlo en contexto:</strong> <a href="./padron.html">el padrón 2022–2026</a> muestra cuántos jóvenes atiende el programa y cuántos terminan su ciclo; <a href="./perfiles.html">los perfiles con la ENIGH</a> muestran quiénes son los becarios frente a quienes lo necesitan y no lo reciben.</p>
-</div>
-</div>
-</div>
-<section id="tres-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="tres-resultados">Tres resultados</h2>
 <div class="cifras">
 <div class="cifra">
-<p><span class="num">2.83×</span></p>
-<p><span class="ic">deciles I–VI frente a VII–X</span></p>
-<p><span class="txt">JCF llega casi tres veces más a los jóvenes de hogares de menor ingreso, pero casi toda la brecha viene de que ahí hay más jóvenes que lo necesitan.</span></p>
-</div>
-<div class="cifra">
-<p><span class="num">1.16</span></p>
-<p><span class="ic">IC95% de 0.81 a 1.79 · no concluyente</span></p>
-<p><span class="txt">Entre quienes lo necesitan, la diferencia por ingreso no es concluyente: los datos son compatibles con un programa parejo y con uno que favorece a los hogares pobres.</span></p>
+<p><span class="num">2.8×</span></p>
+<p><span class="ic">más cobertura en los hogares de los deciles I a VI, casi toda porque ahí hay más elegibles</span></p>
 </div>
 <div class="cifra">
 <p><span class="num">0.47×</span></p>
-<p><span class="ic">mujeres frente a hombres · IC95% de 0.35 a 0.65</span></p>
-<p><span class="txt">Entre quienes lo necesitan, a las mujeres el programa les llega con cerca de la mitad de frecuencia que a los hombres. La subcaptura de la encuesta no lo explica.</span></p>
+<p><span class="ic">la cobertura de las mujeres elegibles frente a la de los hombres elegibles</span></p>
+</div>
+<div class="cifra">
+<p><span class="num">0.16×</span></p>
+<p><span class="ic">la misma razón en los hogares con un niño de 0 a 5 años</span></p>
+</div>
+<div class="cifra">
+<p><span class="num">~30 %</span></p>
+<p><span class="ic">de los beneficiarios del padrón aparece en la encuesta; por eso solo se leen razones</span></p>
+</div>
+</div>
+<section id="lo-que-encontramos" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-encontramos">Lo que encontramos</h2>
+<p><strong>Por ingreso, el programa va a donde están los elegibles.</strong> JCF llega 2.8 veces más a los jóvenes de los hogares de menor ingreso, pero casi toda esa diferencia viene de que ahí hay más jóvenes elegibles. Entre los elegibles, la razón es de 1.16 sin la beca en el ingreso y de 0.66 con ella; con efectos fijos de entidad o corrigiendo la subcaptura regional se acerca a 1 o baja. No hay evidencia de que el programa llegue más a los elegibles de hogares pobres, ni de que les llegue menos.</p>
+<p><strong>Por sexo, hay una brecha, y está en el cuidado.</strong> Entre los elegibles, a las mujeres el programa les llega con 0.47 veces la frecuencia de los hombres (IC95% de 0.35 a 0.65), y la comparación con el padrón muestra que la subcaptura de la encuesta no lo explica. La brecha se concentra en los hogares con niños de 0 a 5 años, donde la razón cae a 0.16. Sin niños pequeños es de 0.85 y no se distingue de 1. Entre los elegibles que buscaron trabajo, en cambio, la brecha se invierte, aunque esa comparación sobrestima la cobertura de las mujeres.</p>
+<div id="cell-fig-resultados" class="cell" data-execution_count="2">
+<div id="fig-resultados" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="height:430px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-4.1.1.min.js" integrity="sha256-O24V1F27f8pb0glCkelh3cVHLNiHAJ5gCaVtq2aNch8=" crossorigin="anonymous"></script>                <div id="58c59bea-14b2-4fdd-8bd9-014657261e3a" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("58c59bea-14b2-4fdd-8bd9-014657261e3a")) {                    Plotly.newPlot(                        "58c59bea-14b2-4fdd-8bd9-014657261e3a",                        [{"customdata":{"dtype":"f8","bdata":"6Bvyk8m++j+nMjYziwsJQEnm+ryr5eI\u002fC4sifI718z8pZi4G6nS4P7uhTwGkjtI\u002f0wlc77aW1j9FSUKcaeLkPzOiehfbkOg\u002fK99bQ+CW+z87Wa5LHKffPw5u3rmVu+0\u002fZNIY7z8J6j9YNbWbfKf8Pw==","shape":"7, 2"},"error_x":{"array":{"dtype":"f8","bdata":"+Dd0PizL6z+8kNwRh4DZP65cFwFZhcA\u002fGgHwzP3sxj+KtsbB8bLjPwjqx1G7+dA\u002fsDWZRycO5D8="},"arrayminus":{"dtype":"f8","bdata":"1FqAZm3l4j\u002fezrdkW4rQP2dn4fzzurA\u002fqCDCinXevj8yy+xa59PVP7IxjaynrMU\u002fOMVwASRv1j8="},"color":"#7F8FA6","symmetric":false,"thickness":2,"type":"data","width":0},"hovertemplate":"%{y}\u003cbr\u003e\u03c1_cob = %{x:.2f} [%{customdata[0]:.2f}, %{customdata[1]:.2f}]\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#9AA7B4","#9AA7B4","#C8553D","#C8553D","#9AA7B4","#9AA7B4","#1F3A5F"],"line":{"color":"white","width":1.5},"size":13},"mode":"markers","x":{"dtype":"f8","bdata":"qSSZI8AYAkC4zVZv2SrrP8jmhwHvl8Q\u002f\u002fZEMUlRO3j\u002fmg3hiZ73xPwp5+hC4PuU\u002fgJro92ig8j8="},"y":["Sexo \u00b7 elegibles que buscaron trabajo","Sexo \u00b7 hogares sin ni\u00f1os de 0 a 5 a\u00f1os","Sexo \u00b7 hogares con ni\u00f1o de 0 a 5 a\u00f1os","Sexo \u00b7 principal","Ingreso \u00b7 corregida por subcaptura regional","Ingreso \u00b7 con la beca en el ingreso","Ingreso \u00b7 principal (sin beca)"],"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","margin":{"b":0,"l":0,"r":0,"t":30},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"shapes":[{"fillcolor":"#EEF3F7","layer":"below","line":{"width":0},"type":"rect","x0":0.67,"x1":1.5,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"#1F3A5F","width":1},"type":"line","x0":1,"x1":1,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"margin":{"l":10,"r":10,"t":30,"b":10},"font":{"family":"Arial, Helvetica, sans-serif","size":12},"hoverlabel":{"bgcolor":"white"},"xaxis":{"type":"log","title":{"text":"Raz\u00f3n de coberturas entre elegibles (escala logar\u00edtmica)"},"tickvals":[0.1,0.25,0.5,0.67,1,1.5,2,3],"ticktext":["0.1","0.25","0.5","0.67","1","1.5","2","3"],"range":[-1.1,0.55]},"height":430,"showlegend":false,"annotations":[{"font":{"color":"#5A6B7B","size":11},"showarrow":false,"text":"\u2190 llega menos al primer grupo","x":-0.6,"xref":"x","y":1.06,"yref":"paper"},{"font":{"color":"#5A6B7B","size":11},"showarrow":false,"text":"llega m\u00e1s \u2192","x":0.35,"xref":"x","y":1.06,"yref":"paper"}]},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('58c59bea-14b2-4fdd-8bd9-014657261e3a');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Razón de coberturas entre elegibles (ρ_cob) con su IC95% (bootstrap Rao-Wu, 2,000 réplicas). Escala logarítmica: 1 = el programa llega igual a los dos grupos. La franja gris es la zona en que el plan considera pequeña la diferencia (0.67 a 1.5).
+</figcaption>
+</figure>
 </div>
 </div>
 </section>
 <section id="qué-implica" class="level2">
 <h2 class="anchored" data-anchor-id="qué-implica">Qué implica</h2>
-<p>Por ingreso, los datos no muestran que JCF se aleje de donde está la necesidad: el problema de focalización no está en los deciles. Está en quién, dentro de los hogares pobres, puede tomar un aprendizaje de jornada completa. La joven que cuida (mujer, con hijos pequeños, con secundaria o menos y en una ciudad grande) es la mayor parte de la necesidad y la menos atendida.</p>
+<p>Lo que separa a quien recibe la beca de quien no la recibe no es el ingreso del hogar. Es el cuidado: en hogares con niños pequeños, la cobertura de las mujeres elegibles es cerca de una sexta parte de la de los hombres. Que un aprendizaje de jornada completa sea difícil de combinar con el cuidado es una hipótesis que estos datos hacen plausible, no una conclusión; probar si el cuidado infantil o los horarios compatibles cerrarían la brecha requiere otro diseño.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="archivos/fig_incidencia_necesidad_vs_becas.png" class="img-fluid figure-img" style="width:72.0%"></p>
-<figcaption>Parte de la necesidad y parte de las becas por grupo. Necesidad: jóvenes de 18 a 29 años que no estudian ni trabajan o ya reciben JCF. Ponderado.</figcaption>
+<figcaption>Parte de los elegibles y parte de las becas por grupo. Ponderado.</figcaption>
 </figure>
 </div>
-<p>Ampliar el padrón sin cambiar el diseño probablemente reproduciría la brecha; combinar el aprendizaje con cuidado infantil o con horarios compatibles es la palanca que estos datos señalan, aunque probar que funcionaría requiere otro diseño.</p>
+<p>De aquí sí se sigue una pregunta para quien diseña el programa: las jóvenes que cuidan cumplen la regla de elegibilidad, pero ¿son parte de la población a la que el programa se propone llegar? Si lo son, hoy casi no les llega.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -228,6 +269,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container">
 <p><strong>Alcance.</strong> El análisis es descriptivo: compara coberturas entre grupos y no estima efectos del programa. La ENIGH capta cerca de 30% de los beneficiarios que registra el padrón, por eso solo se leen razones entre grupos y no coberturas como cifras de población.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Para ponerlo en contexto:</strong> <a href="./padron.html">el padrón 2022–2026</a> muestra cuántos jóvenes atiende el programa, cuántos terminan su ciclo y quién sale antes; <a href="./perfiles.html">los perfiles con la ENIGH</a> muestran quiénes son los becarios frente a quienes son elegibles y no reciben la beca.</p>
 </div>
 </div>
 </div>

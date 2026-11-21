@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lauraho.github.io/jcf-informe/index.html</loc>
-    <lastmod>2026-11-21T05:48:16.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lauraho.github.io/jcf-informe/informe.html</loc>
-    <lastmod>2026-11-21T05:48:37.663Z</lastmod>
+    <loc>https://lauraho.github.io/jcf-informe/padron.html</loc>
+    <lastmod>2026-11-21T06:12:59.476Z</lastmod>
   </url>
   <url>
     <loc>https://lauraho.github.io/jcf-informe/datos.html</loc>
     <lastmod>2026-11-21T05:44:09.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lauraho.github.io/jcf-informe/informe.html</loc>
+    <lastmod>2026-11-21T06:13:22.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lauraho.github.io/jcf-informe/perfiles.html</loc>
+    <lastmod>2026-11-21T06:13:16.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lauraho.github.io/jcf-informe/index.html</loc>
+    <lastmod>2026-11-21T06:13:21.651Z</lastmod>
   </url>
 </urlset>

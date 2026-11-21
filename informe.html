@@ -192,15 +192,16 @@ window.Quarto = {
   <li><a href="#estimando-y-especificación" id="toc-estimando-y-especificación" class="nav-link" data-scroll-target="#estimando-y-especificación">3. Estimando y especificación</a></li>
   <li><a href="#descripción" id="toc-descripción" class="nav-link" data-scroll-target="#descripción">4. Descripción</a>
   <ul class="collapse">
-  <li><a href="#quiénes-reciben-jcf-y-quiénes-necesitándolo-no-lo-reciben" id="toc-quiénes-reciben-jcf-y-quiénes-necesitándolo-no-lo-reciben" class="nav-link" data-scroll-target="#quiénes-reciben-jcf-y-quiénes-necesitándolo-no-lo-reciben">4.1 Quiénes reciben JCF y quiénes, necesitándolo, no lo reciben</a></li>
-  <li><a href="#cómo-se-reparte-la-beca-frente-a-la-necesidad" id="toc-cómo-se-reparte-la-beca-frente-a-la-necesidad" class="nav-link" data-scroll-target="#cómo-se-reparte-la-beca-frente-a-la-necesidad">4.2 Cómo se reparte la beca frente a la necesidad</a></li>
+  <li><a href="#quiénes-reciben-jcf-y-quiénes-siendo-elegibles-no-lo-reciben" id="toc-quiénes-reciben-jcf-y-quiénes-siendo-elegibles-no-lo-reciben" class="nav-link" data-scroll-target="#quiénes-reciben-jcf-y-quiénes-siendo-elegibles-no-lo-reciben">4.1 Quiénes reciben JCF y quiénes, siendo elegibles, no lo reciben</a></li>
+  <li><a href="#cómo-se-reparte-la-beca-entre-los-elegibles" id="toc-cómo-se-reparte-la-beca-entre-los-elegibles" class="nav-link" data-scroll-target="#cómo-se-reparte-la-beca-entre-los-elegibles">4.2 Cómo se reparte la beca entre los elegibles</a></li>
   </ul></li>
   <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">5. Resultados</a>
   <ul class="collapse">
-  <li><a href="#piezas-b-y-a-cuánto-es-necesidad-y-cuánto-es-cobertura" id="toc-piezas-b-y-a-cuánto-es-necesidad-y-cuánto-es-cobertura" class="nav-link" data-scroll-target="#piezas-b-y-a-cuánto-es-necesidad-y-cuánto-es-cobertura">5.1 Piezas (B) y (A): cuánto es necesidad y cuánto es cobertura</a></li>
+  <li><a href="#piezas-b-y-a-cuánto-es-elegibilidad-y-cuánto-es-cobertura" id="toc-piezas-b-y-a-cuánto-es-elegibilidad-y-cuánto-es-cobertura" class="nav-link" data-scroll-target="#piezas-b-y-a-cuánto-es-elegibilidad-y-cuánto-es-cobertura">5.1 Piezas (B) y (A): cuánto es elegibilidad y cuánto es cobertura</a></li>
   <li><a href="#es-un-problema-de-la-encuesta-comparación-con-el-padrón" id="toc-es-un-problema-de-la-encuesta-comparación-con-el-padrón" class="nav-link" data-scroll-target="#es-un-problema-de-la-encuesta-comparación-con-el-padrón">5.2 ¿Es un problema de la encuesta? Comparación con el padrón</a></li>
   <li><a href="#robustez" id="toc-robustez" class="nav-link" data-scroll-target="#robustez">5.3 Robustez</a></li>
   <li><a href="#la-regla-de-decisión" id="toc-la-regla-de-decisión" class="nav-link" data-scroll-target="#la-regla-de-decisión">5.4 La regla de decisión</a></li>
+  <li><a href="#más-allá-del-plan-qué-hay-detrás-de-las-dos-razones" id="toc-más-allá-del-plan-qué-hay-detrás-de-las-dos-razones" class="nav-link" data-scroll-target="#más-allá-del-plan-qué-hay-detrás-de-las-dos-razones">5.5 Más allá del plan: qué hay detrás de las dos razones</a></li>
   </ul></li>
   <li><a href="#interpretación-y-limitaciones" id="toc-interpretación-y-limitaciones" class="nav-link" data-scroll-target="#interpretación-y-limitaciones">6. Interpretación y limitaciones</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
@@ -250,14 +251,15 @@ window.Quarto = {
 
 
 <!-- Archivo generado por generar_informe.py: se edita report/report1.qmd, no este. -->
-<p><strong>Resumen.</strong> Jóvenes Construyendo el Futuro (JCF) atiende a jóvenes de 18 a 29 años que no estudian ni trabajan. Con la muestra de la ENIGH 2024, separo la razón de coberturas entre grupos en necesidad y cobertura entre quienes lo necesitan. JCF llega 2.8 veces más a los hogares de menor ingreso, casi todo por necesidad, y entre quienes lo necesitan la diferencia por ingreso no es concluyente. En cambio, la cobertura de las mujeres que lo necesitan es 0.47 veces la de los hombres (0.47 [0.35, 0.65]). Se compara contra el padrón de registros de beneficiario y el resultado muestra que la subcaptura de la encuesta no lo explica.</p>
+<p><strong>Resumen.</strong></p>
+<p>Jóvenes Construyendo el Futuro (JCF) es un programa federal que atiende a jóvenes de 18 a 29 años que no se encuentran estudiando o con un trabajo remunerado. Con la Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH) 2024 estimo la razón de coberturas <span class="math inline">\(\rho\)</span> entre dos grupos y la separo en dos factores: cuántos más jóvenes elegibles para el programa hay en un grupo y cuánto más le llega el programa a sus elegibles (<span class="math inline">\(\rho_{\text{cob}}\)</span>). Elegible es quien cumple el criterio del problema público que se atiende (no estudia o está trabajando) o ya recibe la beca. JCF llega 2.8 veces más a los hogares de los deciles I a VI, casi todo porque ahí hay más elegibles. Entre los elegibles, la razón por ingreso va de 0.66 (con la beca en el ingreso) a 1.16 (sin ella), y los efectos fijos de entidad y la corrección por subcaptura regional la acercan a 1 o la bajan: no hay evidencia de que el programa llegue más a los elegibles de hogares pobres. Por sexo, la cobertura de las mujeres elegibles es 0.47 veces la de los hombres elegibles (0.47 [0.35, 0.65]), y la comparación con el padrón de beneficiarios muestra que la subcaptura de la encuesta no lo explica. La brecha se concentra en los hogares con niños de 0 a 5 años (0.16) y se invierte entre los elegibles que buscaron trabajo, aunque esa comparación sobrestima la cobertura de las mujeres. El programa llega a quien busca trabajo, pero casi no a quien cuida, y ambas conclusiones dependen de si las jóvenes que realizan trabajos de cuidado deberían contar como parte de la población a la que se dirige.</p>
 <section id="introducción-a-quién-llega-jóvenes-construyendo-el-futuro-jcf" class="level1">
 <h1>1. Introducción: ¿A quién llega Jóvenes Construyendo el Futuro (JCF)?</h1>
-<p>¿A quién llega Jóvenes Construyendo el Futuro (JCF)? El programa federal busca facilitar la incorporación al trabajo de jóvenes de 18 a 29 años que no estudian ni trabajan (STPS, 2024). Para ello, ofrece una beca mensual y capacitación en un centro de trabajo, donde las y los jóvenes pueden desarrollar habilidades y adquirir experiencia laboral.</p>
-<p>Con la Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH) 2024 podemos estimar quiénes reciben la beca y qué proporción representan dentro de la población objetivo. La primera comparación toma en cuenta a todas las personas de 18 a 29 años. La segunda se concentra en jóvenes que no estudian ni trabajan<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> y, en la definición principal del estudio, incluye también a quienes reportan recibir la beca.</p>
-<p>En los hogares de los deciles I a VI, la proporción de jóvenes que reporta recibir la beca es 2.8 veces la de los deciles VII a X. Buena parte de esa diferencia se explica porque la proporción de jóvenes en la población objetivo es 2.4 veces mayor en los primeros seis deciles. Dentro de la población objetivo, la razón de coberturas baja a 1.16 (IC del 95 % de 0.81 a 1.79). El intervalo deja abierta la posibilidad de que cualquiera de los dos grupos tenga mayor cobertura.</p>
-<p>Este trabajo mide la brecha del planteamiento del problema público y las reglas de operación. También muestran cómo cambia esa medida con tres decisiones: medir el ingreso con o sin la beca, contar como necesitados solo a quienes se declaran NEET o también a los receptores, y confiar en la encuesta o corregirla con el padrón. La última pesa porque la ENIGH capta cerca de 30% de los beneficiarios, una subcaptura mayor que la que Meyer, Mok y Sullivan (2015) documentan en las encuestas de Estados Unidos.</p>
-<p>La sección 2 describe las fuentes y el diseño muestral de la ENIGH. La sección 3 presenta el estimando y la especificación del plan de preanálisis. La sección 4 describe a quienes reciben la beca y a quienes no estudian ni trabajan y tampoco la reciben. La sección 5 presenta las estimaciones, las contrasta con el padrón y aplica la regla de decisión del plan. La sección 6 discute el alcance de los resultados.</p>
+<p>¿A quién llega Jóvenes Construyendo el Futuro (JCF)? El programa federal busca facilitar la incorporación al trabajo de jóvenes de 18 a 29 años que no estudian ni trabajan (STPS, 2023). Para ello, ofrece una beca mensual y capacitación en un centro de trabajo, donde las y los jóvenes pueden desarrollar habilidades y adquirir experiencia laboral.</p>
+<p>Con la Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH) 2024 podemos estimar quiénes reciben la beca y qué proporción representan de la población elegible, es decir, de quienes cumplen el criterio del programa. La primera comparación toma en cuenta a todas las personas de 18 a 29 años. La segunda se concentra en jóvenes que no estudian y no trabajan remuneradamente (NEET, por sus siglas en inglés)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> y, en la definición principal del estudio, incluye también a quienes reportan recibir la beca.</p>
+<p>En los hogares de los deciles I a VI, la proporción de jóvenes que reporta recibir la beca es 2.8 veces la de los deciles VII a X. Buena parte de esa diferencia se explica porque la proporción de jóvenes elegibles es 2.4 veces mayor en los primeros seis deciles. Entre los elegibles, la razón de coberturas baja a 1.16 (IC del 95 % de 0.81 a 1.79). El intervalo deja abierta la posibilidad de que cualquiera de los dos grupos tenga mayor cobertura.</p>
+<p>Este trabajo compara a quién llega el programa con la población a la que se dirige según sus reglas de operación. También muestra cómo cambia esa comparación con tres decisiones de medición: medir el ingreso con o sin la beca, contar como elegibles solo a quienes se declaran NEET o también a los receptores, y confiar en la encuesta o corregirla con el padrón. La última pesa porque la ENIGH capta cerca de 30% de los beneficiarios, una subcaptura mayor que la que Meyer, Mok y Sullivan (2015) documentan en las encuestas de Estados Unidos. Una cuarta decisión, que el plan no anticipaba es si las jóvenes que se dedican al trabajo de cuidados no remunerado cuentan como parte de la población a la que se debe dirigir el programa (§5.5).</p>
+<p>La sección 2 describe las fuentes y el diseño muestral de la ENIGH. La sección 3 presenta el estimando y la especificación del plan de preanálisis. La sección 4 describe a quienes reciben la beca y a quienes no estudian ni trabajan y tampoco la reciben. La sección 5 presenta las estimaciones, las contrasta con el padrón, aplica la regla de decisión del plan y agrega tres análisis que el plan no preveía. La sección 6 discute el alcance de los resultados.</p>
 </section>
 <section id="datos-y-diseño" class="level1">
 <h1>2. Datos y diseño</h1>
@@ -279,25 +281,25 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </div>
 </div>
 </div>
-<p><strong>Medición.</strong> Recibir el programa (<span class="math inline">\(D\)</span>) sale de la clave P108 de la tabla de ingresos, en cualquiera de los seis meses previos a la entrevista. La necesidad (<span class="math inline">\(E\)</span>) sale de la asistencia escolar y del trabajo el mes pasado. A 37 jóvenes les falta el dato de trabajo; en la especificación principal cuentan como “no trabajó” y la alternativa (i) los excluye. El ingreso (<span class="math inline">\(Z\)</span>) es trimestral. No faltan edad, sexo, asistencia escolar ni ingreso.</p>
+<p><strong>Medición.</strong> Recibir el programa (<span class="math inline">\(D\)</span>) sale de la clave P108 de la tabla de ingresos, en cualquiera de los seis meses previos a la entrevista. La elegibilidad (<span class="math inline">\(E\)</span>) sale de la asistencia escolar y del trabajo el mes pasado. A 37 jóvenes les falta el dato de trabajo; en la especificación principal cuentan como “no trabajó” y la alternativa (i) los excluye. El ingreso (<span class="math inline">\(Z\)</span>) es trimestral. No faltan edad, sexo, asistencia escolar ni ingreso.</p>
 </section>
 <section id="estimando-y-especificación" class="level1">
 <h1>3. Estimando y especificación</h1>
-<p>La pregunta compara grupos, así que el estimando también. La población son las personas de 18 a 29 años en hogares de México en 2024, ponderadas por el factor de expansión. <span class="math inline">\(D = 1\)</span> si recibió JCF en los seis meses previos a la entrevista y <span class="math inline">\(M = 1\)</span> si es mujer. <span class="math inline">\(E = 1\)</span> si necesita el programa, es decir, si es NEET o ya recibe JCF. Sumo a los receptores porque la mayoría, al ser entrevistados, ya no se declara NEET (§4.1). Así, todo el que recibe JCF tiene <span class="math inline">\(E = 1\)</span>. <span class="math inline">\(Z\)</span> es el ingreso corriente trimestral del hogar por persona <strong>sin el ingreso de JCF</strong>, y <span class="math inline">\(P = 1\)</span> si <span class="math inline">\(Z\)</span> cae en los deciles I a VI de las personas del país.</p>
+<p>La pregunta compara grupos, así que el estimando también. La población son las personas de 18 a 29 años en hogares de México en 2024, ponderadas por el factor de expansión. <span class="math inline">\(D = 1\)</span> si recibió JCF en los seis meses previos a la entrevista y <span class="math inline">\(M = 1\)</span> si es mujer. <span class="math inline">\(E = 1\)</span> si es elegible, es decir, si es NEET o ya recibe JCF<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Sumo a los receptores porque la mayoría, al ser entrevistados, ya no se declara NEET (§4.1). Así, todo el que recibe JCF tiene <span class="math inline">\(E = 1\)</span>. <span class="math inline">\(Z\)</span> es el ingreso corriente trimestral del hogar por persona sin el ingreso de JCF, y <span class="math inline">\(P = 1\)</span> si <span class="math inline">\(Z\)</span> cae en los deciles I a VI de las personas del país.</p>
 <p>Para un grupo <span class="math inline">\(G\)</span> quiero saber cuánto más recibe el programa el grupo <span class="math inline">\(G = 1\)</span> que el grupo <span class="math inline">\(G = 0\)</span>. La diferencia es <span class="math inline">\(\theta = \operatorname{E}[D \mid G=1] - \operatorname{E}[D \mid G=0]\)</span>. La razón de coberturas es <span class="math inline">\(\rho = \operatorname{E}[D \mid G=1]/\operatorname{E}[D \mid G=0] = 1 + \theta/\alpha\)</span>, con <span class="math inline">\(\alpha\)</span> la cobertura del grupo <span class="math inline">\(G = 0\)</span>. Un <span class="math inline">\(\rho\)</span> de 2 significa que el programa llega el doble al grupo <span class="math inline">\(G = 1\)</span>. Leo la razón y no la diferencia porque la encuesta capta solo una parte de los receptores. Si esa subcaptura es igual en los dos grupos, <span class="math inline">\(\theta\)</span> se encoge pero <span class="math inline">\(\rho\)</span> no cambia (§5.2).</p>
-<p>Como solo recibe JCF quien lo necesita, <span class="math inline">\(\rho\)</span> se separa de forma exacta en dos factores:</p>
-<p><span class="math display">\[\rho = \underbrace{\frac{\Pr(E=1 \mid G=1)}{\Pr(E=1 \mid G=0)}}_{\rho_{\text{nec}}:\ \text{quién lo necesita}} \times \underbrace{\frac{\operatorname{E}[D \mid E=1, G=1]}{\operatorname{E}[D \mid E=1, G=0]}}_{\rho_{\text{cob}}:\ \text{a quién le llega, entre quienes lo necesitan}}.\]</span></p>
-<p>El primer factor dice cuánto más necesita el programa un grupo que otro. El segundo dice cuánto más le llega entre quienes lo necesitan, y es el que responde si el programa está bien focalizado. La pieza <strong>(B)</strong> compara hogares de menor y mayor ingreso (<span class="math inline">\(G = P\)</span>). La pieza <strong>(A)</strong> compara mujeres y hombres (<span class="math inline">\(G = M\)</span>), y su estimando principal es <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span>.</p>
-<p><strong>Especificación.</strong> Estimo cada factor con mínimos cuadrados ponderados por el factor de expansión, en un modelo lineal de probabilidad. Como el único regresor es binario, el modelo está saturado y la recta pasa exactamente por las dos medias. La constante es la cobertura del grupo <span class="math inline">\(G = 0\)</span> y la pendiente es la diferencia entre grupos. Por eso aquí el mejor predictor lineal coincide con la esperanza condicional, y no hay una forma funcional que defender. Corro tres regresiones por pieza: <span class="math inline">\(D\)</span> sobre <span class="math inline">\(G\)</span> entre todos los jóvenes (<span class="math inline">\(\rho\)</span>), <span class="math inline">\(E\)</span> sobre <span class="math inline">\(G\)</span> entre todos (<span class="math inline">\(\rho_{\text{nec}}\)</span>) y <span class="math inline">\(D\)</span> sobre <span class="math inline">\(G\)</span> solo entre quienes tienen <span class="math inline">\(E = 1\)</span> (<span class="math inline">\(\rho_{\text{cob}}\)</span>). Las tres usan los mismos pesos, así que <span class="math inline">\(\hat\rho = \hat\rho_{\text{nec}} \times \hat\rho_{\text{cob}}\)</span> también se cumple en la muestra.</p>
-<p><strong>Intervalos.</strong> Los errores estándar se agrupan por UPM, porque la muestra se eligió por conglomerados, y son robustos a heteroscedasticidad. La regresión, sin embargo, no da el error estándar de <span class="math inline">\(\rho\)</span>, que es un cociente. Por eso los IC95% salen de un bootstrap de Rao y Wu (1988) con 2,000 réplicas. En cada réplica remuestreo <span class="math inline">\(n_h - 1\)</span> UPM con reemplazo dentro de cada estrato, reescalo los factores, <strong>recalculo los deciles</strong> y vuelvo a estimar. Recalcular los deciles importa porque el corte de ingreso también es una estimación. Con las mismas réplicas calculo el efecto mínimo detectable con 80% de potencia, <span class="math inline">\(\text{MDE} = \exp\{2.8 \cdot \text{EE}(\log\hat\rho)\}\)</span>.</p>
-<p><strong>Alternativas.</strong> El plan fijó nueve alternativas y las reporto todas en la Tabla 4 (§5.3). Cada una cambia un solo elemento. Tres tocan la medida de ingreso: (a) incluir la beca en el ingreso, como en el plan original; (b) usar el ingreso total del hogar con deciles de hogares; y (c) mover el corte a los deciles IV o V. Dos cambian la forma de comparar: (d) la pendiente de <span class="math inline">\(D\)</span> sobre el rango percentil de <span class="math inline">\(Z\)</span>, en lugar de un corte, y (g) un logit ponderado. Otras dos cambian a quién se compara: (e) <span class="math inline">\(\rho\)</span> por sexo y por edad, y (f) efectos fijos de entidad, que comparan a jóvenes del mismo estado. Las últimas tocan la necesidad: (h) contar solo a quienes se declaran NEET, sin sumar a los receptores que declaran trabajar, e (i) excluir las 37 observaciones sin dato de trabajo.</p>
-<p><strong>Regla de decisión.</strong> El plan (§5) fijó de antemano cuándo una diferencia importa. Es relevante si <span class="math inline">\(\hat\rho \geq 1.5\)</span> o <span class="math inline">\(\hat\rho \leq 0.67\)</span>. Si el IC95% contiene a 1 y queda dentro de <span class="math inline">\((0.67, 1.5)\)</span>, descarto una diferencia relevante. Si el intervalo alcanza 1.5 o 0.67, el resultado es <strong>no concluyente</strong>. Como la encuesta capta menos de 50% de los beneficiarios, además, no leo las coberturas ni <span class="math inline">\(\theta\)</span> como cifras de población, solo las razones.</p>
+<p>Como todo receptor es elegible, <span class="math inline">\(\rho\)</span> se separa de forma exacta en dos factores:</p>
+<p><span class="math display">\[\rho = \underbrace{\frac{\Pr(E=1 \mid G=1)}{\Pr(E=1 \mid G=0)}}_{\rho_{\text{eleg}}:\ \text{cuántos son elegibles}} \times \underbrace{\frac{\operatorname{E}[D \mid E=1, G=1]}{\operatorname{E}[D \mid E=1, G=0]}}_{\rho_{\text{cob}}:\ \text{a quién le llega, entre los elegibles}}.\]</span></p>
+<p>El primer factor dice cuántos más elegibles hay en un grupo que en otro. El segundo dice cuánto más le llega el programa a los elegibles de un grupo, y es el que responde si el programa está bien focalizado. En el vocabulario de evaluación de programas en México, el segundo factor es una razón de coberturas de la población objetivo, la que el programa se propone atender y que cumple sus criterios de elegibilidad, a diferencia de la población potencial, que presenta el problema que justifica su existencia (CONEVAL, 2017). La pieza <strong>(B)</strong> compara hogares de menor y mayor ingreso (<span class="math inline">\(G = P\)</span>). La pieza <strong>(A)</strong> compara mujeres y hombres (<span class="math inline">\(G = M\)</span>), y su estimando principal es <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span>.</p>
+<p><strong>Especificación.</strong> Estimo cada factor con mínimos cuadrados ponderados por el factor de expansión, en un modelo lineal de probabilidad. Como el único regresor es binario, el modelo está saturado y la recta pasa exactamente por las dos medias. La constante es la cobertura del grupo <span class="math inline">\(G = 0\)</span> y la pendiente es la diferencia entre grupos. Por eso aquí el mejor predictor lineal coincide con la esperanza condicional, y no hay una forma funcional que defender. Corro tres regresiones por pieza: <span class="math inline">\(D\)</span> sobre <span class="math inline">\(G\)</span> entre todos los jóvenes (<span class="math inline">\(\rho\)</span>), <span class="math inline">\(E\)</span> sobre <span class="math inline">\(G\)</span> entre todos (<span class="math inline">\(\rho_{\text{eleg}}\)</span>) y <span class="math inline">\(D\)</span> sobre <span class="math inline">\(G\)</span> solo entre quienes tienen <span class="math inline">\(E = 1\)</span> (<span class="math inline">\(\rho_{\text{cob}}\)</span>). Las tres usan los mismos pesos, así que <span class="math inline">\(\hat\rho = \hat\rho_{\text{eleg}} \times \hat\rho_{\text{cob}}\)</span> también se cumple en la muestra.</p>
+<p><strong>Intervalos.</strong> Los errores estándar se agrupan por UPM, porque la muestra se eligió por conglomerados, y son robustos a heteroscedasticidad. La regresión, sin embargo, no da el error estándar de <span class="math inline">\(\rho\)</span>, que es un cociente. Por eso los IC95% salen de un bootstrap de Rao y Wu (1988) con 2,000 réplicas. En cada réplica remuestreo <span class="math inline">\(n_h - 1\)</span> UPM con reemplazo dentro de cada estrato, reescalo los factores, <strong>r</strong>ecalculo los deciles y vuelvo a estimar. Recalcular los deciles importa porque el corte de ingreso también es una estimación. Con las mismas réplicas calculo el efecto mínimo detectable con 80% de potencia, <span class="math inline">\(\text{MDE} = \exp\{2.8 \cdot \text{EE}(\log\hat\rho)\}\)</span>.</p>
+<p><strong>Alternativas.</strong> Se reportan los resultados de las alternativas con su intervalo, en la Tabla 4 (§5.3). Cada una cambia un solo elemento. Tres tocan la medida de ingreso: (a) incluir la beca en el ingreso, como en el plan original; (b) usar el ingreso total del hogar con deciles de hogares; y (c) mover el corte a los deciles IV o V. Dos cambian la forma de comparar: (d) la pendiente de <span class="math inline">\(D\)</span> sobre el rango percentil de <span class="math inline">\(Z\)</span>, en lugar de un corte, y (g) un logit ponderado. Otras dos cambian a quién se compara: (e) <span class="math inline">\(\rho\)</span> por sexo y por edad, y (f) efectos fijos de entidad, que comparan a jóvenes del mismo estado. Las últimas tocan la elegibilidad: (h) contar solo a quienes se declaran NEET, sin sumar a los receptores que declaran trabajar, e (i) excluir las 37 observaciones sin dato de trabajo.</p>
+<p><strong>Regla de decisión.</strong> El plan (§5) fijó de antemano cuándo una diferencia importa. Es relevante si <span class="math inline">\(\hat\rho \geq 1.5\)</span> o <span class="math inline">\(\hat\rho \leq 0.67\)</span>. Si el IC95% contiene a 1 y queda dentro de <span class="math inline">\((0.67, 1.5)\)</span>, descarto una diferencia relevante. Si el intervalo alcanza 1.5 o 0.67, el resultado es no concluyente. Además, como la encuesta capta menos de 50% de los beneficiarios no leo las coberturas ni <span class="math inline">\(\theta\)</span> como cifras de población, solo las razones.</p>
 </section>
 <section id="descripción" class="level1">
 <h1>4. Descripción</h1>
-<section id="quiénes-reciben-jcf-y-quiénes-necesitándolo-no-lo-reciben" class="level2">
-<h2 class="anchored" data-anchor-id="quiénes-reciben-jcf-y-quiénes-necesitándolo-no-lo-reciben">4.1 Quiénes reciben JCF y quiénes, necesitándolo, no lo reciben</h2>
-<p>La Tabla 1 divide a los jóvenes en tres grupos: quienes reciben JCF, quienes lo necesitan y no lo reciben (NEET sin JCF) y el resto. Los dos primeros forman la necesidad <span class="math inline">\(E\)</span>, así que su contraste muestra a quién deja fuera el programa.</p>
+<section id="quiénes-reciben-jcf-y-quiénes-siendo-elegibles-no-lo-reciben" class="level2">
+<h2 class="anchored" data-anchor-id="quiénes-reciben-jcf-y-quiénes-siendo-elegibles-no-lo-reciben">4.1 Quiénes reciben JCF y quiénes, siendo elegibles, no lo reciben</h2>
+<p>La Tabla 1 divide a los jóvenes en tres grupos: quienes reciben JCF, los elegibles que no lo reciben (NEET sin JCF) y el resto. Los dos primeros forman la población elegible <span class="math inline">\(E\)</span>, así que su contraste muestra a quién deja fuera el programa.</p>
 <div id="tabla-perfil" class="cell" data-execution_count="3">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla 1. Perfil de los jóvenes de 18 a 29 años por grupo (porcentajes ponderados)</caption>
@@ -381,25 +383,25 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </div>
 <p>Receptores y NEET sin JCF viven en hogares de ingreso parecido. En ambos grupos, cerca de ocho de cada diez están en los deciles I a VI (79% y 77%). Lo que los separa es la carga de cuidados. Entre las mujeres NEET sin JCF, 63% tiene hijos, contra 37% de las receptoras. Además, 48% de los NEET sin JCF vive con un niño de 0 a 5 años.</p>
 <p>Las razones que dan para no trabajar apuntan en la misma dirección. El 83% de las mujeres NEET sin JCF se dedica a los quehaceres del hogar, mientras que el 54% de los hombres NEET sin JCF buscó trabajo. Los receptores, por su parte, son más rurales (42% contra 27%) y se consideran indígenas con más frecuencia (30% contra 25%). Eso coincide con la prioridad que las reglas de operación dan a municipios de alto rezago y a población indígena.</p>
-<p>La tabla también deja ver un problema de medición. Solo 21% de los receptores se declara NEET, y 65% dice que trabajó el mes pasado porque cuenta el aprendizaje como trabajo. Por eso la necesidad se define como NEET o receptor. Si solo se contara a quienes se declaran NEET, quedarían fuera cuatro de cada cinco receptores (§5.3).</p>
+<p>La tabla también deja ver un problema de medición. Solo 21% de los receptores se declara NEET, y 65% dice que trabajó el mes pasado porque cuenta el aprendizaje como trabajo. Por eso la elegibilidad se define como NEET o receptor. Si solo se contara a quienes se declaran NEET, quedarían fuera cuatro de cada cinco receptores (§5.3).</p>
 </section>
-<section id="cómo-se-reparte-la-beca-frente-a-la-necesidad" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-se-reparte-la-beca-frente-a-la-necesidad">4.2 Cómo se reparte la beca frente a la necesidad</h2>
-<p>La Tabla 1 dice quiénes son los grupos, pero no cómo se reparten las becas entre ellos. Para eso comparo dos partes. <span class="math inline">\(s^{E}_{g}\)</span> es la parte de los jóvenes que necesitan el programa que pertenece al grupo <span class="math inline">\(g\)</span>, y <span class="math inline">\(s^{D}_{g}\)</span> es la parte de las becas que recibe. El índice <span class="math inline">\(s^{D}_{g}/s^{E}_{g}\)</span> vale 1 si el grupo recibe justo su parte, más de 1 si recibe más y menos de 1 si recibe menos. Es una lectura de <span class="math inline">\(\rho_{\text{cob}}\)</span> grupo por grupo, frente al promedio y no frente a otro grupo. La Figura 2 lo muestra para varias dimensiones y la Tabla C5 da los intervalos.</p>
+<section id="cómo-se-reparte-la-beca-entre-los-elegibles" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-se-reparte-la-beca-entre-los-elegibles">4.2 Cómo se reparte la beca entre los elegibles</h2>
+<p>La Tabla 1 dice quiénes son los grupos, pero no cómo se reparten las becas entre ellos. Para eso comparo dos partes. <span class="math inline">\(s^{E}_{g}\)</span> es la parte de los jóvenes elegibles que pertenece al grupo <span class="math inline">\(g\)</span>, y <span class="math inline">\(s^{D}_{g}\)</span> es la parte de las becas que recibe. El índice <span class="math inline">\(s^{D}_{g}/s^{E}_{g}\)</span> vale 1 si el grupo recibe justo su parte, más de 1 si recibe más y menos de 1 si recibe menos. Es una lectura de <span class="math inline">\(\rho_{\text{cob}}\)</span> grupo por grupo, frente al promedio y no frente a otro grupo. La Figura 2 lo muestra para varias dimensiones y la Tabla C5 da los intervalos.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="archivos/fig_incidencia_necesidad_vs_becas.png" class="img-fluid figure-img" style="width:78.0%"></p>
-<figcaption>Figura 2. Parte de la necesidad y parte de las becas por grupo. Necesidad: jóvenes de 18 a 29 años que no estudian ni trabajan o ya reciben JCF. Ponderado.</figcaption>
+<figcaption>Figura 2. Parte de los elegibles y parte de las becas por grupo. Elegibles: jóvenes de 18 a 29 años que no estudian ni trabajan o ya reciben JCF. Ponderado.</figcaption>
 </figure>
 </div>
-<p>Por ingreso, la beca se reparte como la necesidad. Los deciles I a VI tienen 76.7% de la necesidad y reciben 79.3% de las becas (índice 1.03 [0.95, 1.12]). Las brechas aparecen en otras dimensiones. Reciben menos de su parte las mujeres (0.80 [0.71, 0.89]), los jóvenes en hogares con niños de 0 a 5 años (0.66 [0.52, 0.80]), quienes tienen secundaria o menos (0.67 [0.52, 0.83]) y quienes viven en ciudades de 100 mil habitantes o más (0.44 [0.30, 0.60]).</p>
-<p>Reciben más de su parte las localidades rurales (1.57 [1.27, 1.88]) y, según la encuesta, el Sur (2.03 [1.67, 2.38]). La ventaja del Sur está inflada, porque ahí se declara la beca más que en el resto del país, y §5.2 la corrige con el padrón. Que el Sur rural reciba más es coherente con un programa que prioriza municipios de alto rezago. Que las madres jóvenes de las ciudades reciban menos, en cambio, es una brecha que el diseño no busca.</p>
+<p>Por ingreso, la beca se reparte como los elegibles. Los deciles I a VI tienen 76.7% de los elegibles y reciben 79.3% de las becas (índice 1.03 [0.95, 1.12]). Las brechas aparecen en otras dimensiones. Reciben menos de su parte las mujeres (0.80 [0.71, 0.89]), los jóvenes en hogares con niños de 0 a 5 años (0.66 [0.52, 0.80]), quienes tienen secundaria o menos (0.67 [0.52, 0.83]) y quienes viven en ciudades de 100 mil habitantes o más (0.44 [0.30, 0.60]).</p>
+<p>Reciben más de su parte las localidades rurales (1.57 [1.27, 1.88]) y, según la encuesta, el Sur (2.03 [1.67, 2.38]). La ventaja del Sur está inflada, porque ahí se declara la beca más que en el resto del país, y §5.2 la corrige con el padrón. Que el Sur rural reciba más es coherente con un programa que prioriza municipios de alto rezago. En cambio, que los hogares con niños pequeños y las ciudades grandes reciban menos, es una brecha que el diseño no busca. El §5.5 muestra que la de los niños pequeños concentra la brecha por sexo.</p>
 </section>
 </section>
 <section id="resultados" class="level1">
 <h1>5. Resultados</h1>
-<section id="piezas-b-y-a-cuánto-es-necesidad-y-cuánto-es-cobertura" class="level2">
-<h2 class="anchored" data-anchor-id="piezas-b-y-a-cuánto-es-necesidad-y-cuánto-es-cobertura">5.1 Piezas (B) y (A): cuánto es necesidad y cuánto es cobertura</h2>
+<section id="piezas-b-y-a-cuánto-es-elegibilidad-y-cuánto-es-cobertura" class="level2">
+<h2 class="anchored" data-anchor-id="piezas-b-y-a-cuánto-es-elegibilidad-y-cuánto-es-cobertura">5.1 Piezas (B) y (A): cuánto es elegibilidad y cuánto es cobertura</h2>
 <p>La Tabla 2 reúne las dos piezas. Para cada comparación da la razón total, sus dos factores, el MDE y la zona de la regla en que cae <span class="math inline">\(\rho_{\text{cob}}\)</span>.</p>
 <div id="tabla-rho" class="cell" data-execution_count="4">
 <table class="caption-top table table-sm table-striped small">
@@ -416,7 +418,7 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <tr class="header">
 <th style="text-align: left;">Comparación</th>
 <th style="text-align: center;"><span class="math inline">\(\rho\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(\rho_{\text{nec}}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\rho_{\text{eleg}}\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(\rho_{\text{cob}}\)</span></th>
 <th style="text-align: center;">MDE <span class="math inline">\(\rho_{\text{cob}}\)</span></th>
 <th style="text-align: left;">Zona de <span class="math inline">\(\rho_{\text{cob}}\)</span></th>
@@ -450,13 +452,13 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </tbody>
 </table>
 </div>
-<p><strong>(B) A qué hogares.</strong> JCF llega 2.83 veces más a los jóvenes de los deciles I a VI que a los de VII a X. La razón se separa en <span class="math inline">\(\rho_{\text{nec}} = 2.43\)</span> y <span class="math inline">\(\rho_{\text{cob}} = 1.16\)</span>, así que casi toda la brecha viene de la necesidad. Entre quienes lo necesitan, el IC95% de <span class="math inline">\(\rho_{\text{cob}}\)</span> va de 0.81 a 1.79. Contiene a 1 y también alcanza 1.5, por lo que el resultado es <strong>no concluyente</strong>. Los datos son compatibles con un programa que llega parejo entre quienes lo necesitan y con uno que favorece de manera relevante a los hogares de menor ingreso. El MDE de 1.75 lo anticipaba, porque con 310 receptores la pieza (B) no tiene potencia para detectar una razón de 1.5. La hipótesis del plan predecía <span class="math inline">\(\rho_{\text{nec}} &gt; 1\)</span> y <span class="math inline">\(\rho_{\text{cob}} \approx 1\)</span>. La primera parte se cumple y la segunda no se puede afirmar ni descartar.</p>
-<p><strong>Con y sin beca.</strong> Si el ingreso incluye la beca, <span class="math inline">\(\rho_{\text{cob}}\)</span> cae a 0.66 (IC95% de 0.49 a 0.93) y queda del otro lado de 1. Es el efecto mecánico que el plan anticipaba. Al restar la beca, 39 de los 293 hogares receptores (11% ponderado) cambian de grupo, y su decil medio baja de 5.4 a 4.0. El ingreso con beca describe la posición del hogar <em>después</em> de recibir el programa. La conclusión principal es sobre su posición antes de recibirlo.</p>
-<p><strong>(A) A quién.</strong> JCF llega 1.53 veces más a las mujeres que a los hombres, pero solo porque ellas lo necesitan 3.23 veces más. Entre quienes lo necesitan, la cobertura de las mujeres es 0.47 veces la de los hombres (IC95% de 0.35 a 0.65). El intervalo queda completo por debajo de 0.67, así que la diferencia es relevante. La regresión (3) lo muestra de otro modo. Su constante es 0.033 y su pendiente <span class="math inline">\(-0.017\)</span> (EE agrupado 0.004), de modo que la cobertura de las mujeres que lo necesitan es cerca de la mitad de la de los hombres. Por la subcaptura, esas coberturas no son cifras de población, pero su cociente sí se puede leer.</p>
+<p><strong>(B) A qué hogares.</strong> JCF llega 2.83 veces más a los jóvenes de los deciles I a VI que a los de VII a X. La razón se separa en <span class="math inline">\(\rho_{\text{eleg}} = 2.43\)</span> y <span class="math inline">\(\rho_{\text{cob}} = 1.16\)</span>, así que casi toda la brecha viene de que en esos hogares hay más elegibles. Entre los elegibles, el IC95% de <span class="math inline">\(\rho_{\text{cob}}\)</span> va de 0.81 a 1.79. Contiene a 1 y también alcanza 1.5, por lo que el resultado es no concluyente. Los datos son compatibles con un programa que llega parejo a los elegibles y con uno que favorece de manera relevante a los de hogares de menor ingreso. El MDE de 1.75 lo anticipaba, porque con 310 receptores la pieza (B) no tiene potencia para detectar una razón de 1.5. La hipótesis del plan predecía <span class="math inline">\(\rho_{\text{eleg}} &gt; 1\)</span> y <span class="math inline">\(\rho_{\text{cob}} \approx 1\)</span>. La primera parte se cumple y la segunda no se puede afirmar ni descartar.</p>
+<p><strong>Con y sin beca.</strong> Si el ingreso incluye la beca, <span class="math inline">\(\rho_{\text{cob}}\)</span> cae a 0.66 (IC95% de 0.49 a 0.93) y queda del otro lado de 1. Es el efecto mecánico que el plan anticipaba. Al restar la beca, 39 de los 293 hogares receptores (11% ponderado) cambian de grupo, y su decil medio baja de 5.4 a 4.0. El cambio se concentra en el fondo de la distribución. Sin la beca, 33% de los receptores queda en el 15% más pobre de las personas; con ella, 6%. En 42% de esos hogares la beca es al menos la mitad del ingreso, que es justo donde suponer que el resto del ingreso no cambiaría es menos creíble (Figura C1). Por eso leo las dos definiciones como cotas de <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span>: 0.66 con la beca y 1.16 sin ella. El ingreso con beca describe la posición del hogar <em>después</em> de recibir el programa.</p>
+<p><strong>(A) A quién.</strong> JCF llega 1.53 veces más a las mujeres que a los hombres, pero solo porque entre ellas hay 3.23 veces más elegibles. Entre los elegibles, la cobertura de las mujeres es 0.47 veces la de los hombres (IC95% de 0.35 a 0.65). El intervalo queda completo por debajo de 0.67, así que la diferencia es relevante. La regresión (3) lo muestra de otro modo. Su constante es 0.033 y su pendiente <span class="math inline">\(-0.017\)</span> (EE agrupado 0.004), de modo que la cobertura de las mujeres elegibles es cerca de la mitad de la de los hombres elegibles. Por la subcaptura, esas coberturas no son cifras de población, pero su cociente sí se puede leer.</p>
 </section>
 <section id="es-un-problema-de-la-encuesta-comparación-con-el-padrón" class="level2">
 <h2 class="anchored" data-anchor-id="es-un-problema-de-la-encuesta-comparación-con-el-padrón">5.2 ¿Es un problema de la encuesta? Comparación con el padrón</h2>
-<p>Una encuesta no puede decir cuánto se equivoca: hace falta una medida externa del valor verdadero (Meyer, Mok y Sullivan, 2015). Para JCF existe. El Padrón Único de Beneficiarios publica cada mes a todos los aprendices, con sexo, edad, entidad, municipio e importe pagado<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Como en Meyer et al.&nbsp;(2015, pp.&nbsp;216–218), antes de comparar se alinean el periodo, la población y la persona. La ENIGH se levantó del 21 de agosto al 28 de noviembre de 2024 y pregunta por los seis meses previos a la entrevista, así que mayo, junio y julio son los únicos meses que caen en el periodo de referencia de todos los hogares. La comparación se restringe a esos meses y a los jóvenes de 18 a 29 años de ambas fuentes. La beca la cobra el propio aprendiz, de modo que no hay diferencia entre quien tiene derecho y quien recibe el pago.</p>
+<p>Una encuesta no puede decir cuánto se equivoca: hace falta una medida externa del valor verdadero (Meyer, Mok y Sullivan, 2015). Para JCF existe el Padrón Único de Beneficiarios que publica cada mes el registro de todos los aprendices, con sexo, edad, entidad, municipio e importe pagado (§2). Como en Meyer et al.&nbsp;(2015, pp.&nbsp;216–218), antes de comparar se alinean el periodo, la población y la persona. La ENIGH se levantó del 21 de agosto al 28 de noviembre de 2024 y pregunta por los seis meses previos a la entrevista, así que mayo, junio y julio son los únicos meses que caen en el periodo de referencia de todos los hogares. La comparación se restringe a esos meses y a los jóvenes de 18 a 29 años de ambas fuentes. La beca la cobra el propio aprendiz, de modo que no hay diferencia entre quien tiene derecho y quien recibe el pago.</p>
 <div id="tabla-mms" class="cell" data-execution_count="5">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla 3. La ENIGH frente al padrón, jóvenes de 18 a 29 años, mayo a julio de 2024 (IC95% bootstrap Rao-Wu)</caption>
@@ -559,16 +561,16 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <p><strong>Cuánto falta.</strong> El sesgo es el total ponderado de la ENIGH entre el total del padrón, menos 1 (Tabla 3). Faltan alrededor de 70% de las personas, de los meses y de los pesos. Es una tasa <em>neta</em>: mezcla a beneficiarios que no declaran la beca con personas que la declaran sin recibirla, así que la proporción de beneficiarios que sí la declaran podría ser todavía menor. Como la tasa de declaración queda debajo de 50%, se aplica la regla del plan: las coberturas y <span class="math inline">\(\theta\)</span> no se leen como cifras de población, solo las razones.</p>
 <p><strong>Quién falta.</strong> Los tres sesgos casi coinciden, como en Meyer et al.&nbsp;(2015, pp.&nbsp;210–211). El faltante viene de quienes no declaran nada, no de quienes declaran de menos. Quien declara reporta un monto mensual cercano al pagado, 7,154 pesos frente a 7,611 en el padrón, que incluye pagos acumulados. El monto, eso sí, viene redondeado. De los 763 meses declarados entre mayo y julio (todas las edades, sin ponderar), 45% son exactamente 7,500 pesos y solo 15% coincide con la beca de 7,572.</p>
 <p>El error sí aparece en la duración. De quienes cobraron en mayo, 0.66 siguen en el padrón en julio, y en la ENIGH la proporción es 0.79 [0.71, 0.87]. Hay dos lecturas posibles. O los hogares declaran meses que ya no cobraron, o la encuesta capta mejor a quienes llevan más tiempo en el programa, y con totales agregados no se pueden separar. Eso explica que la tasa mensual suba de mayo a julio (Tabla C3), porque el padrón se reduce más rápido que lo que declara la encuesta.</p>
-<p><strong>Por sexo.</strong> Para la pieza (A) importa si mujeres y hombres declaran la beca en la misma proporción, porque la razón observada es la verdadera multiplicada por <span class="math inline">\(r_M/r_H\)</span>. Entre los de 18 a 29 años, la ENIGH capta 30.4% de los meses de beca de las mujeres y 31.0% de los de los hombres, así que <span class="math inline">\(r_M/r_H\)</span> = 0.98 [0.72, 1.38]. Para que la brecha fuera solo un artefacto de la encuesta, <span class="math inline">\(r_M/r_H\)</span> tendría que valer cerca de 0.47, y ese valor queda fuera del intervalo. Aun en su límite inferior (0.72), el <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> corregido sería 0.66, todavía debajo de 1<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. La corrección supone que el error es proporcional dentro de cada sexo. Los falsos positivos, que aparecen aunque la persona no reciba la beca, no cumplen ese supuesto. El padrón también confirma el perfil de los receptores, con 61.0% de mujeres y 96.9% de 18 a 29 años, contra 59.2% y 95.7% en la ENIGH expandida.</p>
-<p><strong>Por región.</strong> Aquí la tasa sí cambia. La ENIGH capta 0.40 [0.30, 0.51] de los meses de beca del Sur y 0.23 [0.15, 0.32] de los del Centro. La razón Sur/Centro es 1.76 [1.13, 2.89], con un intervalo que no contiene a 1, y eso infla la ventaja del Sur en la incidencia (§4.2). Para corregirla, tomo la parte de las becas de cada región del padrón y la parte de la necesidad de la ENIGH. Con esa corrección, el índice del Sur baja de 2.03 a 1.56 y el del Centro sube de 0.58 a 0.81. El del Norte pasa de 0.35 a 0.43 y el de Centro Norte, de 1.13 a 1.21.</p>
-<p><strong>Lo que no se puede separar.</strong> Con totales agregados no se distingue si el faltante viene de hogares que no contestaron o de respuestas equivocadas. INEGI corrige la no respuesta reponderando a las viviendas que sí contestaron dentro de cada estrato (INEGI, 2025b, §8.1). Esa corrección elimina el sesgo solo si, dentro del estrato, contestar no depende de recibir JCF, y la encuesta no puede comprobarlo. Meyer et al.&nbsp;separan las dos fuentes de error con microdatos ligados, pero la ENIGH pública no se puede ligar con el padrón. Tampoco se puede medir la tasa por ingreso, porque el padrón no lo trae. El patrón regional pide cautela con la pieza (B). Si en los hogares de menor ingreso se declara más, como en el Sur, el <span class="math inline">\(\rho_{\text{cob}}\)</span> verdadero de (B) sería menor que 1.16.</p>
+<p><strong>Por sexo.</strong> Para la pieza (A) importa si mujeres y hombres declaran la beca en la misma proporción, porque la razón observada es la verdadera multiplicada por <span class="math inline">\(r_M/r_H\)</span>. Entre los de 18 a 29 años, la ENIGH capta 30.4% de los meses de beca de las mujeres y 31.0% de los de los hombres, así que <span class="math inline">\(r_M/r_H\)</span> = 0.98 [0.72, 1.38]<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Para que la brecha fuera solo un artefacto de la encuesta, <span class="math inline">\(r_M/r_H\)</span> tendría que valer cerca de 0.47, y ese valor queda fuera del intervalo. Aun en su límite inferior (0.72), el <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> corregido sería 0.66, todavía debajo de 1<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. La corrección supone que el error es proporcional dentro de cada sexo. El padrón también confirma el perfil de los receptores, con 61.0% de mujeres y 96.9% de 18 a 29 años, contra 59.2% y 95.7% en la ENIGH expandida.</p>
+<p><strong>Por región.</strong> Aquí la tasa sí cambia. La ENIGH capta 0.40 [0.30, 0.51] de los meses de beca del Sur y 0.23 [0.15, 0.32] de los del Centro. La razón Sur/Centro es 1.76 [1.13, 2.89], con un intervalo que no contiene a 1, y eso infla la ventaja del Sur en la incidencia (§4.2). Para corregirla, tomo la parte de las becas de cada región del padrón y la parte de los elegibles de la ENIGH. Con esa corrección, el índice del Sur baja de 2.03 a 1.56 y el del Centro sube de 0.58 a 0.81. El del Norte pasa de 0.35 a 0.43 y el de Centro Norte, de 1.13 a 1.21.</p>
+<p><strong>Lo que no se puede separar.</strong> Con totales agregados no se distingue si el faltante viene de hogares que no contestaron o de respuestas equivocadas. INEGI corrige la no respuesta reponderando a las viviendas que sí contestaron dentro de cada estrato (INEGI, 2025b, §8.1). Esa corrección elimina el sesgo solo si, dentro del estrato, contestar no depende de recibir JCF, y la encuesta no puede comprobarlo. Meyer et al.&nbsp;separan las dos fuentes de error con microdatos ligados, pero la ENIGH pública no se puede ligar con el padrón. Tampoco se puede medir la tasa por ingreso, porque el padrón no lo trae. El patrón regional pide cautela con la pieza (B): si en los hogares de menor ingreso se declara más, como en el Sur, el <span class="math inline">\(\rho_{\text{cob}}\)</span> verdadero de (B) sería menor que 1.16. El §5.5 mide cuánto pesa la parte regional de ese sesgo.</p>
 </section>
 <section id="robustez" class="level2">
 <h2 class="anchored" data-anchor-id="robustez">5.3 Robustez</h2>
 <p>La Tabla 4 reúne las alternativas del plan para <span class="math inline">\(\rho_{\text{cob}}\)</span>, cada una con su intervalo y su zona.</p>
 <div id="tabla-robustez" class="cell" data-execution_count="6">
 <table class="caption-top table table-sm table-striped small">
-<caption>Tabla 4. Alternativas del plan para <span class="math inline">\(\rho_{\text{cob}}\)</span></caption>
+<caption>Tabla 4. Alternativas del plan para <span class="math inline">\(\rho_{\text{cob}}\)</span>. El logit (g) da los mismos cocientes que la especificación principal porque el modelo es saturado; su intervalo es el mismo.</caption>
 <colgroup>
 <col style="width: 30%">
 <col style="width: 38%">
@@ -593,76 +595,101 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <td style="text-align: left;">No concluyente</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">(a) Ingreso con la beca</td>
+<td style="text-align: center;">0.66 [0.49, 0.93]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">(b) Ingreso total del hogar, deciles de hogares</td>
 <td style="text-align: center;">1.16 [0.82, 1.78]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(c) Corte en el decil IV</td>
 <td style="text-align: center;">1.24 [0.90, 1.74]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(c) Corte en el decil V</td>
 <td style="text-align: center;">1.16 [0.81, 1.63]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(e) Solo mujeres</td>
 <td style="text-align: center;">0.89 [0.57, 1.51]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(e) Solo hombres</td>
 <td style="text-align: center;">2.24 [1.36, 4.40]</td>
 <td style="text-align: left;">Mayor, relevante</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(e) 18 a 24 años</td>
 <td style="text-align: center;">1.12 [0.71, 1.90]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(e) 25 a 29 años</td>
 <td style="text-align: center;">1.24 [0.74, 2.57]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">(f) Efectos fijos de entidad</td>
+<td style="text-align: center;">0.87 [0.60, 1.37]</td>
+<td style="text-align: left;">No concluyente</td>
+</tr>
 <tr class="even">
-<td style="text-align: left;">(h) Necesidad = solo NEET declarados</td>
+<td style="text-align: left;">(g) Logit ponderado (modelo saturado)</td>
+<td style="text-align: center;">1.16 [0.81, 1.79]</td>
+<td style="text-align: left;">No concluyente</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(h) Elegibles = solo NEET declarados</td>
 <td style="text-align: center;">2.13 [1.01, 8.08]</td>
 <td style="text-align: left;">Mayor, relevante</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(i) Sin las 37 obs. sin registro de trabajo</td>
 <td style="text-align: center;">1.14 [0.80, 1.75]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>Pieza (A): mujeres vs hombres</strong></td>
 <td style="text-align: center;"></td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(A) Principal</td>
 <td style="text-align: center;">0.47 [0.35, 0.65]</td>
 <td style="text-align: left;">Menor, relevante</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">(f) Efectos fijos de entidad</td>
+<td style="text-align: center;">0.41 [0.29, 0.58]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
 <tr class="even">
-<td style="text-align: left;">(A, h) Necesidad = solo NEET declarados</td>
+<td style="text-align: left;">(g) Logit ponderado (modelo saturado)</td>
+<td style="text-align: center;">0.47 [0.35, 0.65]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(h) Elegibles = solo NEET declarados</td>
 <td style="text-align: center;">1.73 [0.75, 7.53]</td>
 <td style="text-align: left;">No concluyente</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">(A, i) Sin las 37 obs. sin registro de trabajo</td>
+<tr class="even">
+<td style="text-align: left;">(i) Sin las 37 obs. sin registro de trabajo</td>
 <td style="text-align: center;">0.47 [0.36, 0.66]</td>
 <td style="text-align: left;">Menor, relevante</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>En la pieza (B), siete de las nueve especificaciones alternativas de la Tabla 4 dejan <span class="math inline">\(\rho_{\text{cob}}\)</span> en la zona no concluyente. La excepción clara es la muestra de hombres. Entre los hombres que necesitan el programa, JCF llega 2.24 veces más a los de hogares de menor ingreso (IC95% de 1.36 a 4.40). Entre las mujeres, la razón es 0.89 [0.57, 1.51]. Por la regla del plan, la conclusión de (B) se enuncia como dependiente de esa partición. El programa favorece a los hombres pobres que lo necesitan, y entre las mujeres pobres no se distingue una ventaja. La otra excepción es (h), cuyo límite inferior queda justo en 1.01, en el borde de la zona. Su definición de necesidad, además, tiene el problema que discuto en el párrafo siguiente.</p>
-<p>Las demás alternativas no cambian la lectura. Los efectos fijos de entidad (f) dan <span class="math inline">\(\rho_{\text{cob}}\)</span> de 0.87 para (B) y 0.41 para (A). El logit (g) reproduce exactamente los cocientes, como debe ocurrir con un modelo saturado (§3). La pendiente sobre el rango percentil (d) es <span class="math inline">\(-0.0087\)</span> (EE 0.0015) sin beca y <span class="math inline">\(-0.0014\)</span> (EE 0.0010) con beca. La cobertura baja con el ingreso solo cuando se resta la beca (Figura C1).</p>
-<p>En la pieza (A), la alternativa que cambia la conclusión es (h). Si la necesidad se mide solo con quienes se declaran NEET, <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> sube a 1.73 y el intervalo, de 0.75 a 7.53, lo vuelve no concluyente. Esa definición no es neutral entre sexos. Se declaran NEET 29% de las receptoras y solo 8% de los receptores, de modo que (h) descarta a casi todos los hombres que reciben JCF. El denominador de hombres queda casi sin receptores. Es tan pequeño que en 3 de las 2,000 réplicas no queda ningún receptor hombre declarado NEET, la razón no está definida y esas réplicas quedan fuera del intervalo. Si se cuentan como razones infinitas, el límite superior pasa de 7.53 a 7.85 y la conclusión no cambia. La especificación principal cuenta a todos los receptores como necesitados, que es la regla de elegibilidad del programa.</p>
+<p>En la pieza (B), nueve de las doce alternativas de la Tabla 4 dejan <span class="math inline">\(\rho_{\text{cob}}\)</span> en la zona no concluyente. Las excepciones son tres. Con la beca en el ingreso (a), <span class="math inline">\(\rho_{\text{cob}}\)</span> cae a 0.66, del otro lado de 1 (§5.1). Entre los hombres elegibles, JCF llega 2.24 veces más a los de hogares de menor ingreso (IC95% de 1.36 a 4.40); entre las mujeres, la razón es 0.89 [0.57, 1.51]. Por la regla del plan, la conclusión de (B) se enuncia como dependiente de esa partición. La tercera es (h), cuyo límite inferior queda justo en 1.01, en el borde de la zona. Su definición de elegibilidad, además, tiene el problema que discuto dos párrafos abajo.</p>
+<p>Los efectos fijos de entidad (f) comparan a jóvenes del mismo estado y dejan <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> en 0.87 [0.60, 1.37]. El intervalo sigue siendo no concluyente, pero el punto queda debajo de 1; con la beca en el ingreso y efectos fijos, baja a 0.45 [0.31, 0.67]. En (A), los efectos fijos dan 0.41 [0.29, 0.58]. El logit (g) reproduce exactamente los cocientes, como debe ocurrir con un modelo saturado (§3). La pendiente sobre el rango percentil (d) es -0.0087 [-0.0116, -0.0060] sin beca y -0.0014 [-0.0034, 0.0005] con beca. La cobertura baja con el ingreso solo cuando se resta la beca, y ese descenso viene de los tres primeros veintiles (Figura C1).</p>
+<p>En la pieza (A), la alternativa que cambia la conclusión es (h). Si la elegibilidad se mide solo con quienes se declaran NEET, <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> sube a 1.73 y el intervalo, de 0.75 a 7.53, lo vuelve no concluyente. Esa definición no es neutral entre sexos. Se declaran NEET 29% de las receptoras y solo 8% de los receptores, de modo que (h) descarta a casi todos los hombres que reciben JCF. El denominador de hombres queda casi sin receptores. Es tan pequeño que en 3 de las 2,000 réplicas no queda ningún receptor hombre declarado NEET, la razón no está definida y esas réplicas quedan fuera del intervalo. Si se cuentan como razones infinitas, el límite superior pasa de 7.53 a 7.85 y la conclusión no cambia. La especificación principal cuenta a todos los receptores como elegibles, porque para recibir la beca tuvieron que cumplir la regla del programa.</p>
 </section>
 <section id="la-regla-de-decisión" class="level2">
 <h2 class="anchored" data-anchor-id="la-regla-de-decisión">5.4 La regla de decisión</h2>
@@ -671,23 +698,115 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <li><strong>Verificación.</strong> La ENIGH capta cerca de 30% del padrón, menos de 50%. Por eso solo leo razones, no coberturas ni <span class="math inline">\(\theta\)</span> (§5.2).</li>
 <li><strong>Dirección.</strong> Para los hogares de menor ingreso, el IC95% de <span class="math inline">\(\rho\)</span> (2.83 [1.97, 4.32]) queda completo por encima de 1. Para las mujeres, el IC95% de <span class="math inline">\(\rho\)</span> (1.53 [1.15, 2.11]) queda completo por encima de 1.</li>
 <li><strong>Tamaño.</strong> El IC95% de <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> (0.81 a 1.79) contiene a 1 y alcanza 1.5, así que el resultado de (B) es no concluyente. El de <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> (0.35 a 0.65) queda completo por debajo de 0.67, una diferencia relevante.</li>
-<li><strong>Descomposición.</strong> Como el IC95% de <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> contiene a 1, la brecha por ingreso se explica por quién necesita el programa. Por el punto anterior, sin embargo, no se descarta que el programa también favorezca a los hogares pobres entre quienes lo necesitan. En (A), <span class="math inline">\(\rho^{M}_{\text{cob}} &lt; 1\)</span>, de modo que entre quienes lo necesitan el programa llega menos a las mujeres.</li>
+<li><strong>Descomposición.</strong> Como el IC95% de <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> contiene a 1, la brecha por ingreso se explica por cuántos elegibles hay en cada grupo. Por el punto anterior, sin embargo, no se descarta que el programa también favorezca a los elegibles de hogares pobres. En (A), <span class="math inline">\(\rho^{M}_{\text{cob}} &lt; 1\)</span>, de modo que entre los elegibles el programa llega menos a las mujeres.</li>
 <li><strong>Ingreso.</strong> Con beca, <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> cae del otro lado de 1 (0.66). Lo reporto como efecto mecánico de la transferencia, porque al restarla 11% de los hogares receptores cambia de grupo (§5.1).</li>
-<li><strong>Alternativas.</strong> En (B), la muestra de hombres (e) y la definición (h) cambian la zona, así que la conclusión de (B) se enuncia como dependiente de ellas. En (A), solo (h) la cambia. La conclusión de (A) se enuncia entonces como dependiente de la definición de necesidad, y la principal sigue la regla de elegibilidad del programa.</li>
+<li><strong>Alternativas.</strong> En (B), la muestra de hombres (e) y la definición (h) cambian la zona, así que la conclusión de (B) se enuncia como dependiente de ellas. En (A), solo (h) la cambia. La conclusión de (A) se enuncia entonces como dependiente de la definición de elegibilidad, y la principal sigue la regla del programa.</li>
 </ol>
+</section>
+<section id="más-allá-del-plan-qué-hay-detrás-de-las-dos-razones" class="level2">
+<h2 class="anchored" data-anchor-id="más-allá-del-plan-qué-hay-detrás-de-las-dos-razones">5.5 Más allá del plan: qué hay detrás de las dos razones</h2>
+<p>Los análisis de esta sección no estaban en el plan. Los agregué después de revisar el borrador, usan el mismo bootstrap y la misma semilla, y los reporto aparte para no mezclarlos con la regla de decisión (Apéndice B). Responden dos preguntas: cuánto pesa la subcaptura regional en (B) y qué hay detrás del 0.47 de (A).</p>
+<div id="tabla-extra" class="cell" data-execution_count="7">
+<table class="caption-top table table-sm table-striped small">
+<caption>Tabla 5. Análisis no previstos en el plan (IC95% bootstrap Rao-Wu, 2,000 réplicas, misma semilla)</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 38%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Especificación</th>
+<th style="text-align: center;"><span class="math inline">\(\rho_{\text{cob}}\)</span> [IC95%]</th>
+<th style="text-align: left;">Zona</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pieza (B): deciles I–VI vs VII–X, sin beca</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Principal (Tabla 2)</td>
+<td style="text-align: center;">1.16 [0.81, 1.79]</td>
+<td style="text-align: left;">No concluyente</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Corregida por la tasa de reporte de su región</td>
+<td style="text-align: center;">1.11 [0.77, 1.72]</td>
+<td style="text-align: left;">No concluyente</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Con beca, corregida por región</td>
+<td style="text-align: center;">0.62 [0.47, 0.88]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(j1) Elegibles = receptores + NEET que buscaron trabajo</td>
+<td style="text-align: center;">1.71 [1.19, 2.64]</td>
+<td style="text-align: left;">Mayor, relevante</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(j2) Elegibles = receptores + NEET sin quehaceres del hogar</td>
+<td style="text-align: center;">1.76 [1.23, 2.71]</td>
+<td style="text-align: left;">Mayor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pieza (A): mujeres vs hombres</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Principal (Tabla 2)</td>
+<td style="text-align: center;">0.47 [0.35, 0.65]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Corregida por la tasa de reporte de su región</td>
+<td style="text-align: center;">0.47 [0.35, 0.67]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Solo hogares con un niño de 0 a 5 años</td>
+<td style="text-align: center;">0.16 [0.10, 0.29]</td>
+<td style="text-align: left;">Menor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Solo hogares sin niños de 0 a 5 años</td>
+<td style="text-align: center;">0.85 [0.59, 1.25]</td>
+<td style="text-align: left;">No concluyente</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(j1) Elegibles = receptores + NEET que buscaron trabajo</td>
+<td style="text-align: center;">2.26 [1.67, 3.13]</td>
+<td style="text-align: left;">Mayor, relevante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(j2) Elegibles = receptores + NEET sin quehaceres del hogar</td>
+<td style="text-align: center;">2.29 [1.73, 3.15]</td>
+<td style="text-align: left;">Mayor, relevante</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Subcaptura regional en (B).</strong> Si cada receptor se divide entre la tasa de reporte de su región, recalculada en cada réplica, <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> pasa de 1.16 a 1.11 [0.77, 1.72], y con la beca en el ingreso, de 0.66 a 0.62 [0.47, 0.88]. La corrección solo capta la parte del sesgo por ingreso que coincide con la región. Si dentro de cada región los hogares de menor ingreso declaran más, el <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> verdadero sería todavía menor. La misma corrección deja a (A) donde estaba (0.47 [0.35, 0.67]), porque la tasa de reporte casi no cambia por sexo.</p>
+<p><strong>Qué hay detrás del 0.47.</strong> La población elegible <span class="math inline">\(E\)</span> junta situaciones distintas. El 83% de las mujeres NEET sin JCF se dedica a los quehaceres del hogar, y el 54% de los hombres buscó trabajo (§4.1). Dos cortes las separan. El primero divide <span class="math inline">\(E\)</span> según haya un niño de 0 a 5 años en el hogar, sin tocar la definición de elegibilidad. En hogares con un niño pequeño, la cobertura de las mujeres elegibles es 0.16 [0.10, 0.29] veces la de los hombres; en hogares sin niños pequeños es 0.85 [0.59, 1.25], un intervalo que contiene a 1. La brecha por sexo se concentra donde hay alguien a quien cuidar. Los hombres de hogares con un niño pequeño que reciben la beca son pocos (28 en la muestra), así que ese cociente es impreciso, aunque su intervalo queda lejos de 1.</p>
+<p>El segundo corte cambia la definición de elegibilidad: cuenta solo a los receptores y a los NEET que buscaron trabajo (j1), o a los receptores y a los NEET que no se dedican a los quehaceres (j2). Con esas definiciones, <span class="math inline">\(\rho^{M}_{\text{cob}}\)</span> pasa a 2.26 [1.67, 3.13] y 2.29 [1.73, 3.15], y <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> a 1.71 [1.19, 2.64] y 1.76 [1.23, 2.71]. Entre los elegibles que buscan trabajo, el programa llega más a las mujeres y a los hogares de menor ingreso. Este corte, sin embargo, no es simétrico. A los receptores no se les puede preguntar por qué no trabajan, porque casi todos declaran trabajar, así que todos se quedan en <span class="math inline">\(E\)</span>; de los no receptores, en cambio, solo quedan quienes buscaron empleo. Si muchas receptoras habrían estado dedicadas a los quehaceres sin el programa, (j1) y (j2) exageran su cobertura. Por eso no los leo como estimaciones de <span class="math inline">\(\rho_{\text{cob}}\)</span>, sino como el otro extremo de un rango cuya posición depende de una sola decisión: si las jóvenes que cuidan cuentan como parte de la población a la que se dirige el programa. La Tabla C6 da los conteos de cada definición.</p>
 </section>
 </section>
 <section id="interpretación-y-limitaciones" class="level1">
 <h1>6. Interpretación y limitaciones</h1>
-<p><strong>Qué son estas razones.</strong> <span class="math inline">\(\hat\rho^{M}_{\text{cob}}\)</span> y <span class="math inline">\(\hat\rho^{P}_{\text{cob}}\)</span> son cocientes de la esperanza condicional de <span class="math inline">\(D\)</span> entre dos grupos de jóvenes que necesitan el programa, en México en 2024. Como el regresor es binario, la regresión reproduce exactamente esas medias, sin supuestos de forma funcional. Es decir, entre quienes necesitan JCF, a las mujeres les llega con cerca de la mitad de frecuencia que a los hombres, con un intervalo de 0.35 a 0.65. Una lectura causal requeriría separar la decisión de postularse, la de los centros de trabajo y la asignación del programa, y estos datos no lo permiten.</p>
-<p><strong>Limitaciones.</strong> Cuatro limitaciones vienen de estas variables. La primera es que la necesidad se mide después del programa. <span class="math inline">\(E\)</span> se observa al levantamiento y no antes de entrar, por eso cuento a todos los receptores como necesitados, y un receptor que nunca fue NEET infla el denominador de su grupo. La segunda es que restar la beca no recupera el ingreso sin programa. Supone que el resto del ingreso no cambia, y si sin JCF el joven hubiera trabajado, <span class="math inline">\(Z\)</span> subestima el ingreso de los hogares receptores.</p>
-<p>La tercera es la subcaptura. En términos netos, la ENIGH capta cerca de 30% de los beneficiarios. No detecto una diferencia por sexo, aunque el intervalo de <span class="math inline">\(r_M/r_H\)</span> es ancho (0.72 a 1.38). Sí hay diferencia por región, que corrijo con el padrón. Por ingreso y por tamaño de localidad no se puede verificar, porque el padrón no trae ingreso e identifica municipios, no localidades. Por eso el índice rural (1.57) y el de las ciudades grandes (0.44) se leen con la misma cautela que el regional, y el <span class="math inline">\(\rho_{\text{cob}}\)</span> de (B) podría estar sobrestimado. La cuarta es la potencia. Con 310 receptores en 247 UPM, el MDE de <span class="math inline">\(\rho_{\text{cob}}\)</span> es 1.75 en (B) y 1.56 en (A), y un intervalo que contiene a 1 no demuestra que el programa sea parejo.</p>
-<p><strong>Ética de presentar el resultado.</strong> Una razón de 0.47 es fácil de citar como “las mujeres no quieren el programa” o como “el programa discrimina a las mujeres”. Ninguna de las dos lecturas se sigue de estos datos. NEET es una categoría estadística, no un juicio sobre la voluntad de las personas. El 83% de las mujeres NEET sin JCF declara dedicarse a los quehaceres del hogar, un trabajo no pagado que la categoría NEET vuelve invisible. La asociación entre hijos pequeños y menor cobertura puede reflejar que un aprendizaje de jornada completa es incompatible con el cuidado, que las madres no se postulan o que los centros de trabajo no las aceptan. Estos datos no separan esas explicaciones.</p>
-<p><strong>Implicaciones.</strong> Por ingreso, los datos no muestran que JCF se aleje de donde está la necesidad: el problema de focalización no está en los deciles. Está en quién, dentro de los hogares pobres, puede tomar un aprendizaje de jornada completa. La joven que cuida (mujer, con hijos pequeños, con secundaria o menos y en una ciudad grande) es la mayor parte de la necesidad y la menos atendida. Ampliar el padrón sin cambiar el diseño probablemente reproduciría la brecha; combinar el aprendizaje con cuidado infantil o con horarios compatibles es la palanca que estos datos señalan, aunque probar que funcionaría requiere otro diseño.</p>
-<p><strong>Uso de IA.</strong> Usé Claude (Opus 5.5) para implementar el código en Python (marimo) a partir del plan, verificar resultados y ajustar el codigo a quarto. Todo lo demás, en cuanto a la pregunta, el estimando, el plan, la decisión de caracterizar a los receptores y a los NEET, y la interpretación son míos.</p>
+<p><strong>Qué son estas razones.</strong> <span class="math inline">\(\hat\rho^{M}_{\text{cob}}\)</span> y <span class="math inline">\(\hat\rho^{P}_{\text{cob}}\)</span> son cocientes de la esperanza condicional de <span class="math inline">\(D\)</span> entre dos grupos de jóvenes elegibles, en México en 2024. Como el regresor es binario, la regresión reproduce exactamente esas medias, sin supuestos de forma funcional. Es decir, entre los elegibles, a las mujeres JCF les llega con cerca de la mitad de frecuencia que a los hombres, con un intervalo de 0.35 a 0.65, y esa brecha se concentra en los hogares con niños pequeños (§5.5). Una lectura causal requeriría separar la decisión de postularse, la de los centros de trabajo y la asignación del programa, y estos datos no lo permiten.</p>
+<p><strong>Limitaciones.</strong> Cuatro limitaciones vienen de estas variables. La primera es que la elegibilidad se mide después del programa. <span class="math inline">\(E\)</span> se observa al levantamiento y no antes de entrar, por eso cuento a todos los receptores como elegibles, y un receptor que nunca fue NEET infla el denominador de su grupo. La segunda es que restar la beca no recupera el ingreso sin programa. Supone que el resto del ingreso no cambia, y si sin JCF el joven hubiera trabajado, <span class="math inline">\(Z\)</span> subestima el ingreso de los hogares receptores.</p>
+<p>La tercera es la subcaptura. En términos netos, la ENIGH capta cerca de 30% de los beneficiarios. No detecto una diferencia por sexo, aunque el intervalo de <span class="math inline">\(r_M/r_H\)</span> es ancho (0.72 a 1.38). Sí hay diferencia por región; corregirla baja <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> de 1.16 a 1.11 (§5.5). Por ingreso dentro de cada región y por tamaño de localidad no se puede verificar, porque el padrón no trae ingreso e identifica municipios, no localidades. Por eso el índice rural (1.57) y el de las ciudades grandes (0.44) se leen con la misma cautela que el regional, y el <span class="math inline">\(\rho_{\text{cob}}\)</span> de (B) podría estar sobrestimado. La cuarta es la potencia. Con 310 receptores en 247 UPM, el MDE de <span class="math inline">\(\rho_{\text{cob}}\)</span> es 1.75 en (B) y 1.56 en (A), y un intervalo que contiene a 1 no demuestra que el programa sea parejo.</p>
+<p><strong>Ética de presentar el resultado.</strong> Una razón de 0.47 es fácil de citar como “las mujeres no quieren el programa” o como “el programa discrimina a las mujeres”. Ninguna de las dos lecturas se sigue de estos datos. NEET es una categoría estadística, no un juicio sobre la voluntad de las personas. El 83% de las mujeres NEET sin JCF declara dedicarse a los quehaceres del hogar, un trabajo no pagado que la categoría NEET vuelve invisible. La brecha se concentra en los hogares con niños de 0 a 5 años (0.16 frente a 0.85 sin niños pequeños). Esa asociación puede reflejar que un aprendizaje de jornada completa es incompatible con el cuidado, que las madres no se postulan o que los centros de trabajo no las aceptan. Estos datos no separan esas explicaciones.</p>
+<p><strong>Implicaciones.</strong> Por ingreso, los datos no muestran que JCF se aleje de donde están los elegibles. Con la definición del plan, el programa no llega más a los elegibles de hogares de menor ingreso, pero tampoco hay evidencia de que les llegue menos. Lo que separa a quien recibe la beca de quien no la recibe es otra cosa. Entre los elegibles que buscaron trabajo, el programa llega más a las mujeres y a los hogares de menor ingreso, aunque esa comparación sobrestima su cobertura (§5.5). La brecha está en las jóvenes que cuidan: en hogares con niños pequeños, la cobertura de las mujeres elegibles es cerca de una sexta parte de la de los hombres. Que un aprendizaje de jornada completa sea difícil de combinar con el cuidado es una hipótesis que estos datos hacen plausible, no una conclusión. Probar si el cuidado infantil o los horarios compatibles cerrarían la brecha requiere otro diseño. De aquí sí se sigue una pregunta para quien diseña el programa: las jóvenes que cuidan cumplen la regla de elegibilidad, pero ¿son parte de la población a la que el programa se propone llegar? Si lo son, hoy casi no les llega.</p>
+<p><strong>Uso de IA.</strong> Usé Claude (Opus 5.5) para diseñar el código en Python (marimo) a partir del plan, verificar resultados, ajustar el código a Quarto y hacer una revisión del borrador, de la que salen los análisis del §5.5. Todo lo demás, en cuanto a la pregunta, el estimando, el plan, la decisión de caracterizar a los receptores y a los NEET, y la interpretación, es mío.</p>
 </section>
 <section id="referencias" class="level1">
 <h1>Referencias</h1>
+<p>CONEVAL. (2017). <em>Términos de referencia de la evaluación de diseño</em>. Consejo Nacional de Evaluación de la Política de Desarrollo Social. <a href="https://www.coneval.org.mx/Evaluacion/MDE/Documents/TDR_Diseno.pdf" class="uri">https://www.coneval.org.mx/Evaluacion/MDE/Documents/TDR_Diseno.pdf</a></p>
 <p>INEGI. (2025a). <em>Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH) 2024, nueva serie</em> [Conjunto de datos]. <a href="https://www.inegi.org.mx/programas/enigh/nc/2024/#datos_abiertos" class="uri">https://www.inegi.org.mx/programas/enigh/nc/2024/#datos_abiertos</a></p>
 <p>INEGI. (2025b). <em>Encuesta Nacional de Ingresos y Gastos de los Hogares 2024. ENIGH. Nueva serie. Diseño muestral</em>. Instituto Nacional de Estadística y Geografía.</p>
 <p>Meyer, B. D., Mok, W. K. C., y Sullivan, J. X. (2015). Household surveys in crisis. <em>Journal of Economic Perspectives, 29</em>(4), 199–226. <a href="https://doi.org/10.1257/jep.29.4.199" class="uri">https://doi.org/10.1257/jep.29.4.199</a></p>
@@ -705,12 +824,14 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <li><strong>Verificación por sexo y edad.</strong> El plan (§3 y §6) indicaba que el padrón no reporta sexo ni edad, con base en los cortes anuales de 2019, revisados al escribirlo. Los archivos mensuales de 2024 sí los incluyen, así que la tasa de reporte se calcula también por sexo y para 18 a 29 años (§5.2). La especificación y la regla no cambian.</li>
 <li><strong>Descripción ampliada.</strong> Se agregan la Tabla 1, el cruce de la situación declarada de los receptores y la incidencia por grupo (§4.1 y §4.2). Son descripción dentro del §4 del plan; no cambian el estimando. Los IC de la incidencia salen de las mismas réplicas del bootstrap, con los deciles recalculados.</li>
 <li><strong>Comparación con el padrón ampliada.</strong> El plan preveía solo la tasa de reporte. Se agregan el sesgo en personas, meses y pesos, el monto y la duración declarados y la tasa por región, siguiendo a Meyer et al.&nbsp;(2015), con el mismo bootstrap (notebook, sección 8.2; §5.2). Es una verificación: no cambia el estimando ni la regla de decisión, pero sí matiza la incidencia regional del §4.2.</li>
-<li><strong>Detalles técnicos.</strong> La base tiene 681 estratos, no 680. El logit se estima con los pesos normalizados a media 1, porque con factores de hasta 7,127 el algoritmo no converge.</li>
+<li><strong>Detalles técnicos.</strong> La base tiene 681 estratos, no 680. El logit se estima con los pesos normalizados a media 1, porque con factores de hasta 7,127 el algoritmo no converge. Ningún estrato tiene una sola UPM (el mínimo es 2), así que el remuestreo de <span class="math inline">\(n_h - 1\)</span> UPM está definido en todos.</li>
+<li><strong>Análisis agregados después del borrador (Tabla 4 y §5.5).</strong> La Tabla 4 incluye ahora las alternativas (a), (d), (f) y (g) con sus intervalos, que el plan preveía y el borrador daba solo como cifras puntuales. Además agrego tres análisis que el plan no preveía: la corrección de <span class="math inline">\(\rho_{\text{cob}}\)</span> por la tasa de reporte de cada región, el corte de (A) según haya un niño de 0 a 5 en el hogar y dos definiciones más estrechas de elegibilidad. Usan el mismo bootstrap y la misma semilla (<code>robustez_arbitro.py</code>), no cambian el estimando, la especificación principal ni la regla de decisión, y se leen como exploratorios. Sí cambian la lectura: con beca y sin beca se presentan como cotas de <span class="math inline">\(\rho^{P}_{\text{cob}}\)</span> (§5.1), y la conclusión de (A) se enuncia junto con su dependencia del cuidado (§5.5).</li>
+<li><strong>Nombre de</strong> <span class="math inline">\(E\)</span>. El plan llamaba <em>necesidad</em> a <span class="math inline">\(E\)</span> y <span class="math inline">\(\rho_{\text{nec}}\)</span> a su razón. Los renombro <em>elegibilidad</em> y <span class="math inline">\(\rho_{\text{eleg}}\)</span>, porque <span class="math inline">\(E\)</span> mide quién cumple la regla del programa, no quién lo necesita o lo quiere. El cálculo es el mismo; en el código las variables conservan el nombre anterior (<code>E</code>, <code>_rho_nec</code>).</li>
 </ol>
 </section>
 <section id="apéndice-c.-tablas-adicionales-y-robustez" class="level1">
 <h1>Apéndice C. Tablas adicionales y robustez</h1>
-<div id="tabla-a1" class="cell" data-execution_count="7">
+<div id="tabla-a1" class="cell" data-execution_count="8">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla C1. Conteos sin ponderar</caption>
 <thead>
@@ -767,7 +888,7 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </tbody>
 </table>
 </div>
-<div id="tabla-a2" class="cell" data-execution_count="8">
+<div id="tabla-a2" class="cell" data-execution_count="9">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla C2. Jóvenes de 18 a 29 por decil de ingreso sin beca (ponderado)</caption>
 <colgroup>
@@ -896,7 +1017,7 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </tbody>
 </table>
 </div>
-<div id="tabla-a3" class="cell" data-execution_count="9">
+<div id="tabla-a3" class="cell" data-execution_count="10">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla C3. Tasa de reporte de la ENIGH frente al padrón, mayo a julio de 2024</caption>
 <colgroup>
@@ -1001,7 +1122,7 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </tbody>
 </table>
 </div>
-<div id="tabla-a4" class="cell" data-execution_count="10">
+<div id="tabla-a4" class="cell" data-execution_count="11">
 <table class="caption-top table table-sm table-striped small">
 <caption>Tabla C4. Regresiones por mínimos cuadrados ponderados, errores agrupados por UPM</caption>
 <colgroup>
@@ -1122,9 +1243,9 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 </tbody>
 </table>
 </div>
-<div id="tabla-a5" class="cell" data-execution_count="11">
+<div id="tabla-a5" class="cell" data-execution_count="12">
 <table class="caption-top table table-sm table-striped small">
-<caption>Tabla C5. Incidencia: parte de la necesidad y parte de las becas por grupo</caption>
+<caption>Tabla C5. Incidencia: parte de los elegibles y parte de las becas por grupo</caption>
 <colgroup>
 <col style="width: 13%">
 <col style="width: 13%">
@@ -1139,7 +1260,7 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <th style="text-align: left;">Dimensión</th>
 <th style="text-align: left;">Grupo</th>
 <th style="text-align: right;">Receptores (n)</th>
-<th style="text-align: right;">% necesidad</th>
+<th style="text-align: right;">% elegibles</th>
 <th style="text-align: right;">% becas</th>
 <th style="text-align: center;">Índice [IC95%]</th>
 <th style="text-align: left;">Lectura</th>
@@ -1362,7 +1483,65 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <figcaption>Figura C1. Cobertura de JCF por rango percentil del ingreso per cápita del hogar, sin y con beca (20 grupos). Los niveles no se leen como cifras de población (§5.2).</figcaption>
 </figure>
 </div>
-<p><strong>Reproducibilidad.</strong> El notebook de marimo <code>notebook.py</code>, en la raíz del repositorio, genera todos los archivos de <code>output/</code> que lee este documento: estimaciones, bootstrap de Rao-Wu (2,000 réplicas, semilla 20261113, con los mismos multiplicadores para todos los estimadores), descripción, incidencia, tasa de reporte y sesgo frente al padrón. El README explica cómo obtener los datos y reproducir cada número.</p>
+<div id="tabla-a6" class="cell" data-execution_count="13">
+<table class="caption-top table table-sm table-striped small">
+<caption>Tabla C6. Conteos sin ponderar de cada definición de elegibles (18 a 29 años)</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Definición de elegibles</th>
+<th style="text-align: right;"><span class="math inline">\(n\)</span> mujeres</th>
+<th style="text-align: right;">Receptoras</th>
+<th style="text-align: right;"><span class="math inline">\(n\)</span> hombres</th>
+<th style="text-align: right;">Receptores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Principal (NEET o receptor)</td>
+<td style="text-align: right;">9,823</td>
+<td style="text-align: right;">202</td>
+<td style="text-align: right;">2,415</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(j1) Receptores + NEET que buscaron trabajo</td>
+<td style="text-align: right;">1,010</td>
+<td style="text-align: right;">202</td>
+<td style="text-align: right;">1,313</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(j2) Receptores + NEET sin quehaceres</td>
+<td style="text-align: right;">1,605</td>
+<td style="text-align: right;">202</td>
+<td style="text-align: right;">2,118</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Principal, hogares con niño de 0 a 5</td>
+<td style="text-align: right;">5,933</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">432</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Principal, hogares sin niños de 0 a 5</td>
+<td style="text-align: right;">3,890</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">1,983</td>
+<td style="text-align: right;">80</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Reproducibilidad.</strong> El notebook de marimo <code>notebook.py</code>, en la raíz del repositorio, genera todos los archivos de <code>output/</code> que lee este documento: estimaciones, bootstrap de Rao-Wu (2,000 réplicas, semilla 20261113, con los mismos multiplicadores para todos los estimadores), descripción, incidencia, tasa de reporte y sesgo frente al padrón. <code>robustez_arbitro.py</code> corre el notebook y, con la misma semilla, genera los análisis del §5.5 y las alternativas (d) y (f) de la Tabla 4 (<code>output/arbitro_*.csv</code>). El README explica cómo obtener los datos y reproducir cada número.</p>
 
 
 </section>
@@ -1371,10 +1550,11 @@ Figura&nbsp;1: Calendario de la comparación con el padrón. La ENIGH pregunta p
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
 
 <ol>
-<li id="fn1"><p>NEET es una categoría estadística, no un juicio sobre la voluntad de las personas.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Recurro al termino de NEET como categoría estadística, para evitar no un juicio sobre la voluntad de las personas con el término despectivo de NINI.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Panel persona-mes construido a partir de los archivos mensuales del padrón (febrero de 2024 a enero de 2025).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Panel persona-mes construido a partir de los archivos mensuales del padrón (febrero de 2024 a enero de 2025).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>La subcaptura también podría mover el denominador <span class="math inline">\(E\)</span>: un receptor no captado que se declara NEET queda en <span class="math inline">\(E\)</span> con <span class="math inline">\(D = 0\)</span>, y uno que se declara ocupado sale de <span class="math inline">\(E\)</span>. El efecto es pequeño porque los receptores son 2 a 3% de <span class="math inline">\(E\)</span> (Tabla C2).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><em>Elegible</em> describe el criterio de las reglas de operación (tener de 18 a 29 años y no estudiar ni trabajar). No dice si la persona necesita el programa, si lo quiere ni si le serviría: una joven que cuida a un niño pequeño es elegible aunque lo que le haga falta sea otra cosa.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>La Tabla 3 acumula las personas-mes de los tres meses (0.98); la Tabla C3 promedia las tres tasas mensuales (0.97). Las dos definiciones dan casi lo mismo.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>La subcaptura también podría mover el denominador <span class="math inline">\(E\)</span>: un receptor no captado que se declara NEET queda en <span class="math inline">\(E\)</span> con <span class="math inline">\(D = 0\)</span>, y uno que se declara ocupado sale de <span class="math inline">\(E\)</span>. El efecto es pequeño porque los receptores son 2 a 3% de <span class="math inline">\(E\)</span> (Tabla C2).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
